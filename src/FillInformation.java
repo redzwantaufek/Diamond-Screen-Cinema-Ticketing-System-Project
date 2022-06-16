@@ -28,7 +28,6 @@ public class FillInformation extends JFrame {
 	private JTextField textSeat;
 	private JTextField textField;
 	private JTextField textHallType;
-	private JTextField textName;
 
 	/**
 	 * Launch the application.
@@ -50,7 +49,7 @@ public class FillInformation extends JFrame {
 	 * Create the frame.
 	 */
 	public FillInformation() {
-		setTitle("Diamond Screen Cinema (DSC)");
+		setTitle("DIAMOND SCREEN CINEMA(DSC)");
 		setResizable(false);
 		setIconImage(Toolkit.getDefaultToolkit().getImage("C:\\Users\\taufe\\Documents\\Lecture\\Semester 2\\Object Oriented Programming(SWC2333)\\Kerja\\Assignment group\\Gambo\\Gold Line art Video Camera for Movie Cinema Production Logo (200 \u00D7 200 px).png"));
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -86,7 +85,7 @@ public class FillInformation extends JFrame {
 		lblTitle.setBackground(new Color(255, 255, 255));
 		lblTitle.setFont(new Font("Arial", Font.BOLD | Font.ITALIC, 13));
 		lblTitle.setHorizontalAlignment(SwingConstants.CENTER);
-		lblTitle.setBounds(994, 11, 325, 14);
+		lblTitle.setBounds(978, 32, 325, 14);
 		contentPane.add(lblTitle);
 		
 		JLabel lblSeatNumber = new JLabel("SEAT NUMBER");
@@ -226,19 +225,6 @@ public class FillInformation extends JFrame {
 		textHallType.setColumns(10);
 		textHallType.setBounds(1177, 74, 142, 20);
 		contentPane.add(textHallType);
-		
-		JLabel lblName = new JLabel("NAME");
-		lblName.setForeground(Color.WHITE);
-		lblName.setFont(new Font("Arial", Font.BOLD, 13));
-		lblName.setBounds(965, 45, 160, 14);
-		contentPane.add(lblName);
-		
-		textName = new JTextField();
-		textName.setFont(new Font("Arial", Font.PLAIN, 11));
-		textName.setColumns(10);
-		textName.setBackground(Color.WHITE);
-		textName.setBounds(1177, 43, 142, 20);
-		contentPane.add(textName);
 		
 		JLabel lblTotal = new JLabel("TOTAL:");
 		lblTotal.setForeground(Color.WHITE);
