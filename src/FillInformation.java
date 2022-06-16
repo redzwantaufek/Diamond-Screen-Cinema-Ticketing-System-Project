@@ -7,6 +7,7 @@ import javax.swing.border.EmptyBorder;
 import javax.swing.JLabel;
 import javax.swing.ImageIcon;
 import java.awt.Color;
+import java.awt.Dimension;
 import java.awt.Toolkit;
 import javax.swing.JSeparator;
 import javax.swing.SwingConstants;
@@ -59,6 +60,9 @@ public class FillInformation extends JFrame {
 		contentPane.setBorder(new EmptyBorder(0, 0, 0, 0));
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
+		
+		Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
+        this.setLocation(dim.width/2-this.getSize().width/2, dim.height/2-this.getSize().height/2);
 		
 		JLabel lblCinmaIcon = new JLabel("");
 		lblCinmaIcon.setIcon(new ImageIcon("C:\\Users\\taufe\\Documents\\Lecture\\Semester 2\\Object Oriented Programming(SWC2333)\\Kerja\\Assignment group\\Gambo\\Gold Line art Video Camera for Movie Cinema Production Logo 2(200 \u00D7 200 px) (500 \u00D7 129 px).png"));
@@ -152,13 +156,13 @@ public class FillInformation extends JFrame {
 		JComboBox comboBoxFnB1 = new JComboBox();
 		comboBoxFnB1.setBackground(new Color(255, 255, 255));
 		comboBoxFnB1.setFont(new Font("Arial", Font.PLAIN, 11));
-		comboBoxFnB1.setModel(new DefaultComboBoxModel(new String[] {"1. Nasi Kerabu", "2. Popcorn", "3. Soda Drink", "4.Hot Dog"}));
+		comboBoxFnB1.setModel(new DefaultComboBoxModel(new String[] {"", "1. Nasi Kerabu", "2. Popcorn", "3. Soda Drink", "4.Hot Dog"}));
 		comboBoxFnB1.setBounds(1177, 289, 142, 19);
 		contentPane.add(comboBoxFnB1);
 		
 		JComboBox comboBoxFnB2 = new JComboBox();
 		comboBoxFnB2.setBackground(new Color(255, 255, 255));
-		comboBoxFnB2.setModel(new DefaultComboBoxModel(new String[] {"1. Nasi Kerabu", "2. Popcorn", "3. Soda Drink", "4.Hot Dog"}));
+		comboBoxFnB2.setModel(new DefaultComboBoxModel(new String[] {"", "1. Nasi Kerabu", "2. Popcorn", "3. Soda Drink", "4.Hot Dog"}));
 		comboBoxFnB2.setFont(new Font("Arial", Font.PLAIN, 11));
 		comboBoxFnB2.setBounds(1177, 412, 142, 19);
 		contentPane.add(comboBoxFnB2);
@@ -166,7 +170,7 @@ public class FillInformation extends JFrame {
 		JComboBox comboBoxFnB3 = new JComboBox();
 		comboBoxFnB3.setBackground(new Color(255, 255, 255));
 		comboBoxFnB3.setFont(new Font("Arial", Font.PLAIN, 11));
-		comboBoxFnB3.setModel(new DefaultComboBoxModel(new String[] {"1. Nasi Kerabu", "2. Popcorn", "3. Soda Drink", "4.Hot Dog"}));
+		comboBoxFnB3.setModel(new DefaultComboBoxModel(new String[] {"", "1. Nasi Kerabu", "2. Popcorn", "3. Soda Drink", "4.Hot Dog"}));
 		comboBoxFnB3.setBounds(1177, 350, 142, 19);
 		contentPane.add(comboBoxFnB3);
 		

@@ -6,6 +6,8 @@ import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import java.awt.Toolkit;
 import java.awt.Color;
+import java.awt.Dimension;
+
 import javax.swing.JTabbedPane;
 import javax.swing.border.TitledBorder;
 import javax.swing.border.EtchedBorder;
@@ -56,6 +58,9 @@ public class WelcomePage extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
+		Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
+        this.setLocation(dim.width/2-this.getSize().width/2, dim.height/2-this.getSize().height/2);
+		
 		JLabel lblLogoIconWelcome = new JLabel("");
 		lblLogoIconWelcome.setIcon(new ImageIcon("C:\\Users\\taufe\\Documents\\Lecture\\Semester 2\\Object Oriented Programming(SWC2333)\\Kerja\\Assignment group\\Gambo\\DSC Cinema Logo Long (950 \u00D7 107 px) dolby imax.png"));
 		lblLogoIconWelcome.setBounds(388, 11, 950, 107);
@@ -91,28 +96,28 @@ public class WelcomePage extends JFrame {
 		JLabel lblTopGunLabel = new JLabel("Top Gun: Maverick");
 		lblTopGunLabel.setForeground(Color.WHITE);
 		lblTopGunLabel.setHorizontalAlignment(SwingConstants.CENTER);
-		lblTopGunLabel.setFont(new Font("Arial", Font.BOLD, 11));
+		lblTopGunLabel.setFont(new Font("Arial", Font.BOLD, 14));
 		lblTopGunLabel.setBounds(10, 254, 152, 14);
 		panelNowShowing.add(lblTopGunLabel);
 		
 		JLabel lblSonic2Label = new JLabel("Sonic The Heghedog 2");
 		lblSonic2Label.setHorizontalAlignment(SwingConstants.CENTER);
 		lblSonic2Label.setForeground(Color.WHITE);
-		lblSonic2Label.setFont(new Font("Arial", Font.BOLD, 11));
+		lblSonic2Label.setFont(new Font("Arial", Font.BOLD, 13));
 		lblSonic2Label.setBounds(10, 521, 152, 14);
 		panelNowShowing.add(lblSonic2Label);
 		
 		JLabel lblJurassicLabel = new JLabel("Jurassic World Dominion");
 		lblJurassicLabel.setHorizontalAlignment(SwingConstants.CENTER);
 		lblJurassicLabel.setForeground(Color.WHITE);
-		lblJurassicLabel.setFont(new Font("Arial", Font.BOLD, 11));
+		lblJurassicLabel.setFont(new Font("Arial", Font.BOLD, 12));
 		lblJurassicLabel.setBounds(199, 521, 152, 14);
 		panelNowShowing.add(lblJurassicLabel);
 		
 		JLabel lblDrStrange2Label = new JLabel("Doctor Strange: 2");
 		lblDrStrange2Label.setHorizontalAlignment(SwingConstants.CENTER);
 		lblDrStrange2Label.setForeground(Color.WHITE);
-		lblDrStrange2Label.setFont(new Font("Arial", Font.BOLD, 11));
+		lblDrStrange2Label.setFont(new Font("Arial", Font.BOLD, 14));
 		lblDrStrange2Label.setBounds(199, 254, 152, 14);
 		panelNowShowing.add(lblDrStrange2Label);
 		
@@ -131,7 +136,7 @@ public class WelcomePage extends JFrame {
 		
 		JComboBox comboBoxCinemaType = new JComboBox();
 		comboBoxCinemaType.setBackground(new Color(255, 255, 255));
-		comboBoxCinemaType.setModel(new DefaultComboBoxModel(new String[] {"1. Classic", "2. Dolby Cinema", "3. IMAX Cinema", "4. Deluxe", "5. Luxury"}));
+		comboBoxCinemaType.setModel(new DefaultComboBoxModel(new String[] {"", "1. Classic", "2. Dolby Cinema", "3. IMAX Cinema", "4. Deluxe", "5. Luxury"}));
 		comboBoxCinemaType.setFont(new Font("Arial", Font.BOLD, 14));
 		comboBoxCinemaType.setBounds(217, 27, 177, 22);
 		panelsShowtime.add(comboBoxCinemaType);
@@ -155,22 +160,22 @@ public class WelcomePage extends JFrame {
 		panelsShowtime.add(lblTime);
 		
 		JComboBox comboBoxMovie = new JComboBox();
-		comboBoxMovie.setModel(new DefaultComboBoxModel(new String[] {"1. Top Gun Maverick", "2. Doctor Strange: 2", "3. Sonic The Heghedog 2", "4. Jurassic World Dominion"}));
+		comboBoxMovie.setModel(new DefaultComboBoxModel(new String[] {"", "1. Top Gun Maverick", "2. Doctor Strange: 2", "3. Sonic The Heghedog 2", "4. Jurassic World Dominion"}));
 		comboBoxMovie.setFont(new Font("Arial", Font.BOLD, 14));
 		comboBoxMovie.setBackground(Color.WHITE);
 		comboBoxMovie.setBounds(217, 78, 177, 22);
 		panelsShowtime.add(comboBoxMovie);
 		
 		JComboBox comboBoxDate = new JComboBox();
-		comboBoxDate.setModel(new DefaultComboBoxModel(new String[] {"20/6/2022", "21/6/2022", "22/6/2022", "23/6/2022", "24/6/2022", "25/6/2022", "26/6/2022", "27/6/2022"}));
+		comboBoxDate.setModel(new DefaultComboBoxModel(new String[] {"", "20/6/2022", "21/6/2022", "22/6/2022", "23/6/2022", "24/6/2022", "25/6/2022", "26/6/2022", "27/6/2022"}));
 		comboBoxDate.setFont(new Font("Arial", Font.BOLD, 14));
 		comboBoxDate.setBackground(Color.WHITE);
 		comboBoxDate.setBounds(217, 128, 177, 22);
 		panelsShowtime.add(comboBoxDate);
 		
 		JComboBox comboBoxTime = new JComboBox();
-		comboBoxTime.setMaximumRowCount(10);
-		comboBoxTime.setModel(new DefaultComboBoxModel(new String[] {"11:00", "01:30", "03:20", "05:40", "07:30", "08:10", "09:20", "10:10", "11:30", "12:10"}));
+		comboBoxTime.setMaximumRowCount(11);
+		comboBoxTime.setModel(new DefaultComboBoxModel(new String[] {"", "11:00", "01:30", "03:20", "05:40", "07:30", "08:10", "09:20", "10:10", "11:30", "12:10"}));
 		comboBoxTime.setFont(new Font("Arial", Font.BOLD, 14));
 		comboBoxTime.setBackground(Color.WHITE);
 		comboBoxTime.setBounds(217, 179, 177, 22);
@@ -195,7 +200,7 @@ public class WelcomePage extends JFrame {
 		panelComingSoon.setLayout(null);
 		
 		JLabel lblNewLabel = new JLabel("");
-		lblNewLabel.setIcon(new ImageIcon("C:\\Users\\taufe\\Documents\\Lecture\\Semester 2\\Object Oriented Programming(SWC2333)\\Kerja\\Assignment group\\Gambo\\images kecik.jpg"));
+		lblNewLabel.setIcon(new ImageIcon("C:\\Users\\taufe\\Documents\\Lecture\\Semester 2\\Object Oriented Programming(SWC2333)\\Kerja\\Assignment group\\Gambo\\iloveimg-resized\\Webp.net-gifmaker.gif"));
 		lblNewLabel.setBounds(10, 25, 264, 394);
 		panelComingSoon.add(lblNewLabel);
 	}
