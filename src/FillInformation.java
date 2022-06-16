@@ -28,7 +28,6 @@ public class FillInformation extends JFrame {
 	private JPanel contentPane;
 	private JTextField textSeat;
 	private JTextField textField;
-	private JTextField textHallType;
 
 	/**
 	 * Launch the application.
@@ -217,23 +216,23 @@ public class FillInformation extends JFrame {
 		lblPriceIcon.setBounds(560, 11, 367, 546);
 		contentPane.add(lblPriceIcon);
 		
-		JLabel lblCinemaType = new JLabel("CINEMA TYPE");
-		lblCinemaType.setForeground(Color.WHITE);
-		lblCinemaType.setFont(new Font("Arial", Font.BOLD, 13));
-		lblCinemaType.setBounds(965, 76, 160, 14);
-		contentPane.add(lblCinemaType);
-		
-		textHallType = new JTextField();
-		textHallType.setBackground(new Color(255, 255, 255));
-		textHallType.setFont(new Font("Arial", Font.PLAIN, 11));
-		textHallType.setColumns(10);
-		textHallType.setBounds(1177, 74, 142, 20);
-		contentPane.add(textHallType);
+		JLabel lblHallNum = new JLabel("HALL NUMBER");
+		lblHallNum.setForeground(Color.WHITE);
+		lblHallNum.setFont(new Font("Arial", Font.BOLD, 13));
+		lblHallNum.setBounds(965, 76, 160, 14);
+		contentPane.add(lblHallNum);
 		
 		JLabel lblTotal = new JLabel("TOTAL:");
 		lblTotal.setForeground(Color.WHITE);
 		lblTotal.setFont(new Font("Arial", Font.BOLD, 13));
 		lblTotal.setBounds(965, 483, 160, 14);
 		contentPane.add(lblTotal);
+		
+		JComboBox comboBoxHallNum = new JComboBox();
+		comboBoxHallNum.setModel(new DefaultComboBoxModel(new String[] {"", "Hall 1", "Hall 2", "Hall 3", "Hall 4", "Hall 5", "Hall 6", "Hall 7"}));
+		comboBoxHallNum.setFont(new Font("Arial", Font.PLAIN, 11));
+		comboBoxHallNum.setBackground(Color.WHITE);
+		comboBoxHallNum.setBounds(1177, 72, 142, 19);
+		contentPane.add(comboBoxHallNum);
 	}
 }
