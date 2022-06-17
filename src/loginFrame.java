@@ -21,7 +21,7 @@ public class loginFrame extends JFrame {
 
 	private JPanel contentPane;
 	private JPasswordField passwordField;
-	private JTextField textField;
+	private JTextField textName;
 
 	/**
 	 * Launch the application.
@@ -73,19 +73,22 @@ public class loginFrame extends JFrame {
 		passwordField.setBounds(667, 484, 128, 20);
 		contentPane.add(passwordField);
 		
-		textField = new JTextField();
-		textField.setBounds(667, 447, 128, 20);
-		contentPane.add(textField);
-		textField.setColumns(10);
+		textName = new JTextField();
+		textName.setBounds(667, 447, 128, 20);
+		contentPane.add(textName);
+		textName.setColumns(10);
 		
 		JButton btnLogin = new JButton("Login");
 		btnLogin.setBackground(new Color(255, 255, 255));
 		btnLogin.setForeground(new Color(0, 0, 0));
 		btnLogin.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				WelcomePage a = new WelcomePage();
+				String name = textName.getText();
+				WelcomePage a = new WelcomePage(name);
 				a.show();
 				dispose();
+				
+				
 			}
 		});
 		btnLogin.setBounds(612, 536, 128, 23);

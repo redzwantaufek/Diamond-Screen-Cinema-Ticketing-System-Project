@@ -42,7 +42,7 @@ public class paymentPage extends JFrame {
 	/**
 	 * Create the frame.
 	 */
-	public paymentPage(String type, String movie, String date, String time, int spinnerAdult1,int spinnerChildren1,double totalTicket, String comboBox1, String comboBox2, String comboBox3,String hallNum,String seat,String membership1) {
+	public paymentPage(String name,String type, String movie, String date, String time, int spinnerAdult1,int spinnerChildren1,double totalTicket, String comboBox1, String comboBox2, String comboBox3,String hallNum,String seat,String membership1) {
 		setTitle("DIAMOND SCREEN CINEMA (DSC)");
 		setResizable(false);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -66,7 +66,7 @@ public class paymentPage extends JFrame {
 		contentPane.add(panelConfirmPayment);
 		panelConfirmPayment.setLayout(null);
 		
-		JLabel lblName = new JLabel("NAME:");
+		JLabel lblName = new JLabel("NAME:" +name);
 		lblName.setForeground(new Color(255, 255, 255));
 		lblName.setFont(new Font("Arial", Font.BOLD, 16));
 		lblName.setBounds(10, 28, 170, 43);

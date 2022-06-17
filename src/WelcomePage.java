@@ -36,7 +36,7 @@ public class WelcomePage extends JFrame {
 	/**
 	 * Launch the application.
 	 */
-	public static void main(String[] args) {
+	/*public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
@@ -52,7 +52,7 @@ public class WelcomePage extends JFrame {
 	/**
 	 * Create the frame.
 	 */
-	public WelcomePage() {
+	public WelcomePage(String name) {
 		setResizable(false);
 		setIconImage(Toolkit.getDefaultToolkit().getImage("C:\\Users\\taufe\\Documents\\Lecture\\Semester 2\\Object Oriented Programming(SWC2333)\\Kerja\\Assignment group\\Gambo\\Gold Line art Video Camera for Movie Cinema Production Logo (200 \u00D7 200 px).png"));
 		setTitle("DIAMOND SCREEN CINEMA (DSC)");
@@ -320,7 +320,7 @@ public class WelcomePage extends JFrame {
 					time =  "12:10";
 				}
 				
-				FillInformation a = new FillInformation(type,movie,date,time,pricetype);
+				FillInformation a = new FillInformation(name,type,movie,date,time,pricetype);
 				a.show();
 				dispose();
 				

@@ -59,7 +59,7 @@ public class FillInformation extends JFrame
 	/**
 	 * Create the frame.
 	 */
-	public FillInformation(String type, String movie, String date, String time,double pricetype) {
+	public FillInformation(String name, String type, String movie, String date, String time,double pricetype) {
 		setTitle("DIAMOND SCREEN CINEMA(DSC)");
 		setResizable(false);
 		setIconImage(Toolkit.getDefaultToolkit().getImage("C:\\Users\\taufe\\Documents\\Lecture\\Semester 2\\Object Oriented Programming(SWC2333)\\Kerja\\Assignment group\\Gambo\\Gold Line art Video Camera for Movie Cinema Production Logo (200 \u00D7 200 px).png"));
@@ -344,7 +344,7 @@ public class FillInformation extends JFrame
                 }
                 
                 double totalTicket = (spinnerAdult1 * 5) + (spinnerAdult1 * pricetype) + (spinnerChildren1 * 3) +(spinnerChildren1 * pricetype) + (price * textFnB) + (price * textFnB1) + (price * textFnB2) - (membership);
-				paymentPage a = new paymentPage(type,movie,date,time,spinnerAdult1,spinnerChildren1,totalTicket,comboBox1,comboBox2,comboBox3,hallNum,seat,membership1);
+				paymentPage a = new paymentPage(name, type,movie,date,time,spinnerAdult1,spinnerChildren1,totalTicket,comboBox1,comboBox2,comboBox3,hallNum,seat,membership1);
 				a.show();
 				dispose();
 			}
@@ -434,7 +434,7 @@ public class FillInformation extends JFrame
 
                 //ComboBox3
                 String comboBox3 = (String)comboBoxFnB3.getSelectedItem();
-                if (((String) comboBoxFnB1.getSelectedItem()).equals("1. Nasi Kerabu"))
+                if (((String) comboBoxFnB3.getSelectedItem()).equals("1. Nasi Kerabu"))
                 {
                 	comboBox3 ="Nasi Kerabu";
                     price = 10.0;
