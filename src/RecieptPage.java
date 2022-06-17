@@ -52,7 +52,7 @@ public class RecieptPage extends JFrame {
 		contentPane.setLayout(null);
 		
 		JLabel lblBanner = new JLabel("");
-		lblBanner.setIcon(new ImageIcon("C:\\Users\\taufe\\Documents\\Lecture\\Semester 2\\Object Oriented Programming(SWC2333)\\Kerja\\Assignment group\\Gambo\\DSC Cinema Logo Long (1328 \u00D7 143 px).png"));
+		lblBanner.setIcon(new ImageIcon("C:\\Users\\taufe\\Documents\\Lecture\\Semester 2\\Object Oriented Programming(SWC2333)\\Kerja\\Assignment group\\Gambo\\Black Yellow Simple Business Thank You Postcard (1348 \u00D7 143 mm).png"));
 		lblBanner.setHorizontalAlignment(SwingConstants.CENTER);
 		lblBanner.setBounds(0, 0, 1348, 143);
 		contentPane.add(lblBanner);
@@ -171,11 +171,6 @@ public class RecieptPage extends JFrame {
 		panel_1.add(panelPrice2);
 		panelPrice2.setLayout(null);
 		
-		JLabel lblTotal = new JLabel("TOTAL:");
-		lblTotal.setBounds(174, 304, 54, 18);
-		panelPrice2.add(lblTotal);
-		lblTotal.setFont(new Font("Arial", Font.BOLD, 15));
-		
 		JSeparator separator_1_1 = new JSeparator();
 		separator_1_1.setOrientation(SwingConstants.VERTICAL);
 		separator_1_1.setForeground(Color.BLACK);
@@ -190,6 +185,11 @@ public class RecieptPage extends JFrame {
 		DateTimeFormatter dtf = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm:ss");
 		LocalDateTime now = LocalDateTime.now();
 		lblTimePurchaseAns.setText(dtf.format(now));
+		
+		JLabel lblTotal = new JLabel("TOTAL:");
+		lblTotal.setBounds(453, 337, 54, 18);
+		panel_1.add(lblTotal);
+		lblTotal.setFont(new Font("Arial", Font.BOLD, 15));
 		
 		Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
         this.setLocation(dim.width/2-this.getSize().width/2, dim.height/2-this.getSize().height/2);

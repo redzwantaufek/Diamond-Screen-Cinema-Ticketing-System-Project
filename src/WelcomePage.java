@@ -29,6 +29,8 @@ import javax.swing.JComboBox;
 import javax.swing.DefaultComboBoxModel;
 import javax.swing.JButton;
 import javax.swing.border.LineBorder;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
 public class WelcomePage extends JFrame {
 
@@ -198,6 +200,13 @@ public class WelcomePage extends JFrame {
 		panelsShowtime.add(lblShowtimeTable);
 		
 		JButton btnNext = new JButton("NEXT");
+		btnNext.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				FillInformation a = new FillInformation();
+				a.show();
+				dispose();
+			}
+		});
 		btnNext.setBounds(214, 309, 177, 23);
 		panelsShowtime.add(btnNext);
 		btnNext.setForeground(new Color(0, 0, 0));

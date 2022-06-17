@@ -83,6 +83,9 @@ public class loginFrame extends JFrame {
 		btnLogin.setForeground(new Color(0, 0, 0));
 		btnLogin.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				WelcomePage a = new WelcomePage();
+				a.show();
+				dispose();
 			}
 		});
 		btnLogin.setBounds(612, 536, 128, 23);

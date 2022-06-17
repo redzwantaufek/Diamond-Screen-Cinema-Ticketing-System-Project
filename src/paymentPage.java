@@ -14,6 +14,8 @@ import javax.swing.border.TitledBorder;
 import java.awt.Font;
 import javax.swing.JSeparator;
 import javax.swing.JButton;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
 public class paymentPage extends JFrame {
 
@@ -152,6 +154,13 @@ public class paymentPage extends JFrame {
 		panelConfirmPayment.add(lblTotal);
 		
 		JButton btnConfirm = new JButton("CONFIRM");
+		btnConfirm.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+						RecieptPage a = new RecieptPage();
+						a.show();
+						dispose();
+			}
+		});
 		btnConfirm.setBackground(new Color(255, 255, 255));
 		btnConfirm.setFont(new Font("Arial", Font.BOLD, 11));
 		btnConfirm.setBounds(901, 365, 89, 23);

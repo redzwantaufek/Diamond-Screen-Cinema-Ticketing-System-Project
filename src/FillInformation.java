@@ -22,6 +22,8 @@ import javax.swing.JCheckBox;
 import javax.swing.border.EtchedBorder;
 import javax.swing.border.MatteBorder;
 import javax.swing.JButton;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
 public class FillInformation extends JFrame {
 
@@ -191,6 +193,13 @@ public class FillInformation extends JFrame {
 		textField.setColumns(10);
 		
 		JButton btnProceed = new JButton("Proceed");
+		btnProceed.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				paymentPage a = new paymentPage();
+				a.show();
+				dispose();
+			}
+		});
 		btnProceed.setBackground(new Color(255, 255, 255));
 		btnProceed.setFont(new Font("Arial", Font.PLAIN, 11));
 		btnProceed.setBounds(1177, 517, 142, 23);
@@ -207,11 +216,82 @@ public class FillInformation extends JFrame {
 		lblHallNum.setBounds(965, 76, 160, 14);
 		contentPane.add(lblHallNum);
 		
-		JLabel lblTotal = new JLabel("TOTAL:");
-		lblTotal.setForeground(Color.WHITE);
-		lblTotal.setFont(new Font("Arial", Font.BOLD, 13));
-		lblTotal.setBounds(965, 483, 160, 14);
-		contentPane.add(lblTotal);
+		JButton btnTotal = new JButton("Total:");
+        btnTotal.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                int spinnerAdult1 = (int) spinnerAdult.getValue();
+                int spinnerChildren1 = (int) spinnerChildren.getValue();
+                double price = 0.0;
+                double price1 = 0.0;
+                double price2 = 0.0;
+                double textFnB = Double.parseDouble(textFnB1.getText());
+                double textFnB1 = Double.parseDouble(textFnB2.getText());
+                double textFnB2 = Double.parseDouble(textFnB3.getText());
+                
+                
+                //Combobox1
+                if (((String) comboBoxFnB1.getSelectedItem()).equals("1. Nasi Kerabu"))
+                {
+                    price = 10.0;
+                    
+                }
+                else if (((String) comboBoxFnB1.getSelectedItem()).equals("2. Popcorn"))
+                {
+                    price = 7.50;
+                }
+                else if (((String) comboBoxFnB1.getSelectedItem()).equals("3. Soda Drink"))
+                {
+                	price = 4.0;
+                }
+                else if (((String) comboBoxFnB1.getSelectedItem()).equals("4. Hot Dog"))
+                {
+                    price = 6.50;
+                }
+
+                //ComboBox2
+                if (((String) comboBoxFnB2.getSelectedItem()).equals("1. Nasi Kerabu"))
+                {
+                    price = 10.0;
+                }
+                else if (((String) comboBoxFnB2.getSelectedItem()).equals("2. Popcorn"))
+                {
+                    price = 7.50;
+                }
+                else if (((String) comboBoxFnB2.getSelectedItem()).equals("3. Soda Drink"))
+                {
+                    price = 4.0;
+                }
+                else if (((String) comboBoxFnB2.getSelectedItem()).equals("4. Hot Dog"))
+                {
+                    price = 6.50;
+                }
+
+                //ComboBox3
+                if (((String) comboBoxFnB3.getSelectedItem()).equals("1. Nasi Kerabu"))
+                {
+                    price = 10.0;
+                }
+                else if (((String) comboBoxFnB3.getSelectedItem()).equals("2. Popcorn"))
+                {
+                    price = 7.50;
+                }
+                else if (((String) comboBoxFnB3.getSelectedItem()).equals("3. Soda Drink"))
+                {
+                    price = 4.0;
+                }
+                else if (((String) comboBoxFnB3.getSelectedItem()).equals("4. Hot Dog"))
+                {
+                    price = 6.50;
+                }
+
+                double totalTicket = (spinnerAdult1 * 15) + (spinnerChildren1 *12) + (price * textFnB) + (price * textFnB1) + (price * textFnB2);
+                textField.setText("" +totalTicket);
+            }
+        });
+        btnTotal.setBackground(new Color(255, 255, 255));
+        btnTotal.setFont(new Font("Arial", Font.BOLD, 14));
+        btnTotal.setBounds(965, 474, 160, 23);
+        contentPane.add(btnTotal);
 		
 		JComboBox comboBoxHallNum = new JComboBox();
 		comboBoxHallNum.setModel(new DefaultComboBoxModel(new String[] {"", "Hall 1", "Hall 2", "Hall 3", "Hall 4", "Hall 5", "Hall 6", "Hall 7"}));
@@ -240,5 +320,10 @@ public class FillInformation extends JFrame {
 		textFnB3.setBackground(Color.WHITE);
 		textFnB3.setBounds(1177, 442, 142, 20);
 		contentPane.add(textFnB3);
+	}
+	
+	public void actionPerformed(ActionEvent e) {
+		// TODO Auto-generated method stub
+		
 	}
 }

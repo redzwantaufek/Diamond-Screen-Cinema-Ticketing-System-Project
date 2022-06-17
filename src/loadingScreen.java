@@ -62,7 +62,7 @@ public class loadingScreen {
         while( i<=100)
         {
             try{
-                Thread.sleep(15);//Pausing execution for 50 milliseconds
+                Thread.sleep(20);//Pausing execution for 50 milliseconds
                 progressBar.setValue(i);//Setting value of Progress Bar
                 message.setText("LOADING "+Integer.toString(i)+"%");//Setting text of the message JLabel
                 i++;
