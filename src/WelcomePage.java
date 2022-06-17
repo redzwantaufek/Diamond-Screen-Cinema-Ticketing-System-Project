@@ -5,6 +5,12 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import java.awt.Toolkit;
+import java.text.SimpleDateFormat;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.GregorianCalendar;
 import java.awt.Color;
 import java.awt.Dimension;
 
@@ -12,6 +18,7 @@ import javax.swing.JTabbedPane;
 import javax.swing.border.TitledBorder;
 import javax.swing.border.EtchedBorder;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.ImageIcon;
 import javax.swing.JScrollPane;
 import javax.swing.ScrollPaneConstants;
@@ -21,11 +28,13 @@ import javax.swing.SwingConstants;
 import javax.swing.JComboBox;
 import javax.swing.DefaultComboBoxModel;
 import javax.swing.JButton;
+import javax.swing.border.LineBorder;
 
 public class WelcomePage extends JFrame {
 
 	
 	private JPanel contentPane;
+	private JLabel dateTime;
 
 	/**
 	 * Launch the application.
@@ -46,6 +55,8 @@ public class WelcomePage extends JFrame {
 	/**
 	 * Create the frame.
 	 */
+	
+	
 	public WelcomePage() {
 		setResizable(false);
 		setIconImage(Toolkit.getDefaultToolkit().getImage("C:\\Users\\taufe\\Documents\\Lecture\\Semester 2\\Object Oriented Programming(SWC2333)\\Kerja\\Assignment group\\Gambo\\Gold Line art Video Camera for Movie Cinema Production Logo (200 \u00D7 200 px).png"));
@@ -131,46 +142,46 @@ public class WelcomePage extends JFrame {
 		JLabel lblCinemaType = new JLabel("CINEMA TYPE");
 		lblCinemaType.setForeground(new Color(255, 255, 255));
 		lblCinemaType.setFont(new Font("Arial", Font.BOLD, 14));
-		lblCinemaType.setBounds(29, 22, 113, 30);
+		lblCinemaType.setBounds(26, 100, 113, 30);
 		panelsShowtime.add(lblCinemaType);
 		
 		JComboBox comboBoxCinemaType = new JComboBox();
 		comboBoxCinemaType.setBackground(new Color(255, 255, 255));
 		comboBoxCinemaType.setModel(new DefaultComboBoxModel(new String[] {"", "1. Classic", "2. Dolby Cinema", "3. IMAX Cinema", "4. Deluxe", "5. Luxury"}));
 		comboBoxCinemaType.setFont(new Font("Arial", Font.BOLD, 14));
-		comboBoxCinemaType.setBounds(217, 27, 177, 22);
+		comboBoxCinemaType.setBounds(214, 105, 177, 22);
 		panelsShowtime.add(comboBoxCinemaType);
 		
 		JLabel lblMovie = new JLabel("MOVIE");
 		lblMovie.setForeground(Color.WHITE);
 		lblMovie.setFont(new Font("Arial", Font.BOLD, 14));
-		lblMovie.setBounds(29, 73, 113, 30);
+		lblMovie.setBounds(26, 151, 113, 30);
 		panelsShowtime.add(lblMovie);
 		
 		JLabel lblDate = new JLabel("DATE");
 		lblDate.setForeground(Color.WHITE);
 		lblDate.setFont(new Font("Arial", Font.BOLD, 14));
-		lblDate.setBounds(29, 123, 113, 30);
+		lblDate.setBounds(26, 201, 113, 30);
 		panelsShowtime.add(lblDate);
 		
 		JLabel lblTime = new JLabel("TIME");
 		lblTime.setForeground(Color.WHITE);
 		lblTime.setFont(new Font("Arial", Font.BOLD, 14));
-		lblTime.setBounds(29, 174, 113, 30);
+		lblTime.setBounds(26, 252, 113, 30);
 		panelsShowtime.add(lblTime);
 		
 		JComboBox comboBoxMovie = new JComboBox();
 		comboBoxMovie.setModel(new DefaultComboBoxModel(new String[] {"", "1. Top Gun Maverick", "2. Doctor Strange: 2", "3. Sonic The Heghedog 2", "4. Jurassic World Dominion"}));
 		comboBoxMovie.setFont(new Font("Arial", Font.BOLD, 14));
 		comboBoxMovie.setBackground(Color.WHITE);
-		comboBoxMovie.setBounds(217, 78, 177, 22);
+		comboBoxMovie.setBounds(214, 156, 177, 22);
 		panelsShowtime.add(comboBoxMovie);
 		
 		JComboBox comboBoxDate = new JComboBox();
 		comboBoxDate.setModel(new DefaultComboBoxModel(new String[] {"", "20/6/2022", "21/6/2022", "22/6/2022", "23/6/2022", "24/6/2022", "25/6/2022", "26/6/2022", "27/6/2022"}));
 		comboBoxDate.setFont(new Font("Arial", Font.BOLD, 14));
 		comboBoxDate.setBackground(Color.WHITE);
-		comboBoxDate.setBounds(217, 128, 177, 22);
+		comboBoxDate.setBounds(214, 206, 177, 22);
 		panelsShowtime.add(comboBoxDate);
 		
 		JComboBox comboBoxTime = new JComboBox();
@@ -178,7 +189,7 @@ public class WelcomePage extends JFrame {
 		comboBoxTime.setModel(new DefaultComboBoxModel(new String[] {"", "11:00", "01:30", "03:20", "05:40", "07:30", "08:10", "09:20", "10:10", "11:30", "12:10"}));
 		comboBoxTime.setFont(new Font("Arial", Font.BOLD, 14));
 		comboBoxTime.setBackground(Color.WHITE);
-		comboBoxTime.setBounds(217, 179, 177, 22);
+		comboBoxTime.setBounds(214, 257, 177, 22);
 		panelsShowtime.add(comboBoxTime);
 		
 		JLabel lblShowtimeTable = new JLabel("");
@@ -187,10 +198,54 @@ public class WelcomePage extends JFrame {
 		panelsShowtime.add(lblShowtimeTable);
 		
 		JButton btnNext = new JButton("NEXT");
-		btnNext.setBounds(217, 231, 177, 23);
+		btnNext.setBounds(214, 309, 177, 23);
 		panelsShowtime.add(btnNext);
 		btnNext.setForeground(new Color(0, 0, 0));
 		btnNext.setFont(new Font("Arial", Font.BOLD, 14));
+		
+		JPanel panel = new JPanel();
+		panel.setForeground(new Color(255, 255, 255));
+		panel.setBorder(new TitledBorder(new LineBorder(new Color(255, 255, 255)), "CURRENT TIME", TitledBorder.CENTER, TitledBorder.TOP, null, new Color(255, 255, 255)));
+		panel.setBackground(new Color(0, 102, 102));
+		panel.setBounds(26, 15, 365, 78);
+		panelsShowtime.add(panel);
+		panel.setLayout(null);
+		
+		JLabel dateTime = new JLabel("Dynamic Clock");
+		dateTime.setForeground(new Color(255, 255, 255));
+		dateTime.setFont(new Font("Arial", Font.BOLD, 20));
+		dateTime.setHorizontalAlignment(SwingConstants.CENTER);
+		dateTime.setBounds(10, 21, 345, 41);
+		panel.add(dateTime);
+		
+		Thread clock  = new Thread(){
+		    public void run(){
+		        for(;;){
+		            //empty for will run forever
+		            //System.out.print("p");
+		            Calendar cal = new GregorianCalendar();
+
+		            int month = cal.get(Calendar.MONTH);
+		            int year = cal.get(Calendar.YEAR);
+		            int day = cal.get(Calendar.DAY_OF_MONTH);
+
+		            int second = cal.get(Calendar.SECOND);
+		            int minute = cal.get(Calendar.MINUTE);
+		            int hour = cal.get(Calendar.HOUR);
+
+		            dateTime.setText(day+"/"+(((month+1)<10)?"0"+(month+1):(month+1))+"/"+year+"  "
+		                    + hour+":"+minute+":"+second
+		                    );
+
+		                try {
+		                    sleep(1000);//1000 miliseconds it will sleep which means one second sleep
+		                } catch (Exception e) {
+		                    JOptionPane.showMessageDialog(null, e);
+		                }
+		        }
+		    }
+		    };
+		    clock.start();
 		
 		JPanel panelComingSoon = new JPanel();
 		panelComingSoon.setBackground(new Color(0, 102, 102));

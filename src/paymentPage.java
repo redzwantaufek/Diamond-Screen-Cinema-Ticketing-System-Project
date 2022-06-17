@@ -39,6 +39,7 @@ public class paymentPage extends JFrame {
 	 * Create the frame.
 	 */
 	public paymentPage() {
+		setTitle("DIAMOND SCREEN CINEMA (DSC)");
 		setResizable(false);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 1364, 609);
@@ -63,61 +64,61 @@ public class paymentPage extends JFrame {
 		
 		JLabel lblName = new JLabel("NAME:");
 		lblName.setForeground(new Color(255, 255, 255));
-		lblName.setFont(new Font("Arial", Font.BOLD, 16));
+		lblName.setFont(new Font("Arial", Font.BOLD, 15));
 		lblName.setBounds(10, 28, 170, 43);
 		panelConfirmPayment.add(lblName);
 		
 		JLabel lblCinemaType = new JLabel("CINEMA TYPE:");
 		lblCinemaType.setForeground(Color.WHITE);
-		lblCinemaType.setFont(new Font("Arial", Font.BOLD, 16));
+		lblCinemaType.setFont(new Font("Arial", Font.BOLD, 15));
 		lblCinemaType.setBounds(10, 82, 170, 43);
 		panelConfirmPayment.add(lblCinemaType);
 		
 		JLabel lblMovie = new JLabel("MOVIE:");
 		lblMovie.setForeground(Color.WHITE);
-		lblMovie.setFont(new Font("Arial", Font.BOLD, 16));
+		lblMovie.setFont(new Font("Arial", Font.BOLD, 15));
 		lblMovie.setBounds(10, 136, 170, 43);
 		panelConfirmPayment.add(lblMovie);
 		
 		JLabel lblDate = new JLabel("DATE:");
 		lblDate.setForeground(Color.WHITE);
-		lblDate.setFont(new Font("Arial", Font.BOLD, 16));
+		lblDate.setFont(new Font("Arial", Font.BOLD, 15));
 		lblDate.setBounds(10, 190, 170, 43);
 		panelConfirmPayment.add(lblDate);
 		
 		JLabel lblTime = new JLabel("TIME:");
 		lblTime.setForeground(Color.WHITE);
-		lblTime.setFont(new Font("Arial", Font.BOLD, 16));
+		lblTime.setFont(new Font("Arial", Font.BOLD, 15));
 		lblTime.setBounds(10, 244, 170, 43);
 		panelConfirmPayment.add(lblTime);
 		
 		JLabel lblHallNum = new JLabel("HALL NUMBER:");
 		lblHallNum.setForeground(Color.WHITE);
-		lblHallNum.setFont(new Font("Arial", Font.BOLD, 16));
+		lblHallNum.setFont(new Font("Arial", Font.BOLD, 15));
 		lblHallNum.setBounds(10, 299, 170, 43);
 		panelConfirmPayment.add(lblHallNum);
 		
 		JLabel lblSeatNum = new JLabel("SEAT NUMBER");
 		lblSeatNum.setForeground(Color.WHITE);
-		lblSeatNum.setFont(new Font("Arial", Font.BOLD, 16));
+		lblSeatNum.setFont(new Font("Arial", Font.BOLD, 15));
 		lblSeatNum.setBounds(10, 353, 170, 43);
 		panelConfirmPayment.add(lblSeatNum);
 		
 		JLabel lblAdult = new JLabel("ADULT:");
 		lblAdult.setForeground(Color.WHITE);
-		lblAdult.setFont(new Font("Arial", Font.BOLD, 16));
+		lblAdult.setFont(new Font("Arial", Font.BOLD, 15));
 		lblAdult.setBounds(383, 28, 184, 43);
 		panelConfirmPayment.add(lblAdult);
 		
 		JLabel lblChildren = new JLabel("CHILDREN:");
 		lblChildren.setForeground(Color.WHITE);
-		lblChildren.setFont(new Font("Arial", Font.BOLD, 16));
+		lblChildren.setFont(new Font("Arial", Font.BOLD, 15));
 		lblChildren.setBounds(383, 82, 184, 43);
 		panelConfirmPayment.add(lblChildren);
 		
 		JLabel lblMember = new JLabel("MEMBERSHIP:");
 		lblMember.setForeground(Color.WHITE);
-		lblMember.setFont(new Font("Arial", Font.BOLD, 16));
+		lblMember.setFont(new Font("Arial", Font.BOLD, 15));
 		lblMember.setBounds(383, 299, 184, 43);
 		panelConfirmPayment.add(lblMember);
 		
@@ -128,25 +129,25 @@ public class paymentPage extends JFrame {
 		
 		JLabel lblFnB1 = new JLabel("FOOD & BEVERAGES 1:");
 		lblFnB1.setForeground(Color.WHITE);
-		lblFnB1.setFont(new Font("Arial", Font.BOLD, 16));
+		lblFnB1.setFont(new Font("Arial", Font.BOLD, 15));
 		lblFnB1.setBounds(383, 136, 198, 43);
 		panelConfirmPayment.add(lblFnB1);
 		
 		JLabel lblFnB2 = new JLabel("FOOD & BEVERAGES 2:");
 		lblFnB2.setForeground(Color.WHITE);
-		lblFnB2.setFont(new Font("Arial", Font.BOLD, 16));
+		lblFnB2.setFont(new Font("Arial", Font.BOLD, 15));
 		lblFnB2.setBounds(383, 190, 198, 43);
 		panelConfirmPayment.add(lblFnB2);
 		
 		JLabel lblFnB3 = new JLabel("FOOD & BEVERAGES 3:");
 		lblFnB3.setForeground(Color.WHITE);
-		lblFnB3.setFont(new Font("Arial", Font.BOLD, 16));
+		lblFnB3.setFont(new Font("Arial", Font.BOLD, 15));
 		lblFnB3.setBounds(383, 244, 198, 43);
 		panelConfirmPayment.add(lblFnB3);
 		
 		JLabel lblTotal = new JLabel("TOTAL:");
 		lblTotal.setForeground(Color.WHITE);
-		lblTotal.setFont(new Font("Arial", Font.BOLD, 16));
+		lblTotal.setFont(new Font("Arial", Font.BOLD, 15));
 		lblTotal.setBounds(383, 353, 184, 43);
 		panelConfirmPayment.add(lblTotal);
 		

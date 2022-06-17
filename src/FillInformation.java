@@ -28,6 +28,9 @@ public class FillInformation extends JFrame {
 	private JPanel contentPane;
 	private JTextField textSeat;
 	private JTextField textField;
+	private JTextField textFnB1;
+	private JTextField textFnB2;
+	private JTextField textFnB3;
 
 	/**
 	 * Launch the application.
@@ -64,8 +67,8 @@ public class FillInformation extends JFrame {
         this.setLocation(dim.width/2-this.getSize().width/2, dim.height/2-this.getSize().height/2);
 		
 		JLabel lblCinmaIcon = new JLabel("");
-		lblCinmaIcon.setIcon(new ImageIcon("C:\\Users\\taufe\\Documents\\Lecture\\Semester 2\\Object Oriented Programming(SWC2333)\\Kerja\\Assignment group\\Gambo\\Gold Line art Video Camera for Movie Cinema Production Logo 2(200 \u00D7 200 px) (500 \u00D7 129 px).png"));
-		lblCinmaIcon.setBounds(22, 11, 500, 129);
+		lblCinmaIcon.setIcon(new ImageIcon("C:\\Users\\taufe\\Documents\\Lecture\\Semester 2\\Object Oriented Programming(SWC2333)\\Kerja\\Assignment group\\Gambo\\DSC Cinema Logo Long (542 \u00D7 140 px).png"));
+		lblCinmaIcon.setBounds(0, 0, 542, 140);
 		contentPane.add(lblCinmaIcon);
 		
 		JLabel lblSeatIcon = new JLabel("");
@@ -173,24 +176,6 @@ public class FillInformation extends JFrame {
 		comboBoxFnB3.setBounds(1177, 350, 142, 19);
 		contentPane.add(comboBoxFnB3);
 		
-		JSpinner spinnerFnB1 = new JSpinner();
-		spinnerFnB1.setBackground(new Color(255, 255, 255));
-		spinnerFnB1.setFont(new Font("Arial", Font.PLAIN, 11));
-		spinnerFnB1.setBounds(1177, 319, 142, 20);
-		contentPane.add(spinnerFnB1);
-		
-		JSpinner spinnerFnB2 = new JSpinner();
-		spinnerFnB2.setBackground(new Color(255, 255, 255));
-		spinnerFnB2.setFont(new Font("Arial", Font.PLAIN, 11));
-		spinnerFnB2.setBounds(1177, 381, 142, 20);
-		contentPane.add(spinnerFnB2);
-		
-		JSpinner spinnerFnB3 = new JSpinner();
-		spinnerFnB3.setBackground(new Color(255, 255, 255));
-		spinnerFnB3.setFont(new Font("Arial", Font.PLAIN, 11));
-		spinnerFnB3.setBounds(1177, 442, 142, 20);
-		contentPane.add(spinnerFnB3);
-		
 		JSeparator separator_2 = new JSeparator();
 		separator_2.setBounds(965, 508, 160, 10);
 		contentPane.add(separator_2);
@@ -212,7 +197,7 @@ public class FillInformation extends JFrame {
 		contentPane.add(btnProceed);
 		
 		JLabel lblPriceIcon = new JLabel("");
-		lblPriceIcon.setIcon(new ImageIcon("C:\\Users\\taufe\\Documents\\Lecture\\Semester 2\\Object Oriented Programming(SWC2333)\\Kerja\\Assignment group\\Gambo\\Green Minimalist Price List Instagram Post.png"));
+		lblPriceIcon.setIcon(new ImageIcon("C:\\Users\\taufe\\Documents\\Lecture\\Semester 2\\Object Oriented Programming(SWC2333)\\Kerja\\Assignment group\\Gambo\\Price List cinema.png"));
 		lblPriceIcon.setBounds(560, 11, 367, 546);
 		contentPane.add(lblPriceIcon);
 		
@@ -234,5 +219,26 @@ public class FillInformation extends JFrame {
 		comboBoxHallNum.setBackground(Color.WHITE);
 		comboBoxHallNum.setBounds(1177, 72, 142, 19);
 		contentPane.add(comboBoxHallNum);
+		
+		textFnB1 = new JTextField();
+		textFnB1.setFont(new Font("Arial", Font.PLAIN, 11));
+		textFnB1.setColumns(10);
+		textFnB1.setBackground(Color.WHITE);
+		textFnB1.setBounds(1177, 319, 142, 20);
+		contentPane.add(textFnB1);
+		
+		textFnB2 = new JTextField();
+		textFnB2.setFont(new Font("Arial", Font.PLAIN, 11));
+		textFnB2.setColumns(10);
+		textFnB2.setBackground(Color.WHITE);
+		textFnB2.setBounds(1177, 381, 142, 20);
+		contentPane.add(textFnB2);
+		
+		textFnB3 = new JTextField();
+		textFnB3.setFont(new Font("Arial", Font.PLAIN, 11));
+		textFnB3.setColumns(10);
+		textFnB3.setBackground(Color.WHITE);
+		textFnB3.setBounds(1177, 442, 142, 20);
+		contentPane.add(textFnB3);
 	}
 }
