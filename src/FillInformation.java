@@ -294,11 +294,6 @@ public class FillInformation extends JFrame
                 	comboBox1 ="Hot Dog";
                     price = 6.50;
                 }
-                else
-                {
-                	comboBox1 = " ";
-                	price = 0.0;
-                }
 
                 //ComboBox2
                 String comboBox2 = (String)comboBoxFnB2.getSelectedItem();
@@ -323,11 +318,6 @@ public class FillInformation extends JFrame
                 	comboBox2 ="Hot Dog";
                     price = 6.50;
                 }
-                else
-                {
-                	comboBox2 = " ";
-                	price = 0.0;
-                }
 
                 //ComboBox3
                 String comboBox3 = (String)comboBoxFnB3.getSelectedItem();
@@ -351,11 +341,6 @@ public class FillInformation extends JFrame
                 {
                 	comboBox3 ="Hot Dog";
                     price = 6.50;
-                }
-                else
-                {
-                	comboBox3 = " ";
-                	price = 0.0;
                 }
                 
                 double totalTicket = (spinnerAdult1 * 5) + (spinnerAdult1 * pricetype) + (spinnerChildren1 * 3) +(spinnerChildren1 * pricetype) + (price * textFnB) + (price * textFnB1) + (price * textFnB2) - (membership);
@@ -422,11 +407,6 @@ public class FillInformation extends JFrame
                 	comboBox1 ="Hot Dog";
                     price = 6.50;
                 }
-                else
-                {
-                	comboBox1 = " ";
-                	price = 0.0;
-                }
 
                 //ComboBox2
                 String comboBox2 = (String)comboBoxFnB2.getSelectedItem();
@@ -451,11 +431,6 @@ public class FillInformation extends JFrame
                 	comboBox2 ="Hot Dog";
                     price = 6.50;
                 }
-                else
-                {
-                	comboBox2 = " ";
-                	price = 0.0;
-                }
 
                 //ComboBox3
                 String comboBox3 = (String)comboBoxFnB3.getSelectedItem();
@@ -479,11 +454,6 @@ public class FillInformation extends JFrame
                 {
                 	comboBox3 ="Hot Dog";
                     price = 6.50;
-                }
-                else
-                {
-                	comboBox3 = " ";
-                	price = 0.0;
                 }
                 
                 double totalTicket = (spinnerAdult1 * 5) + (spinnerAdult1 * pricetype) + (spinnerChildren1 * 3) +(spinnerChildren1 * pricetype) + (price * textFnB) + (price * textFnB1) + (price * textFnB2) - (membership);
