@@ -77,37 +77,37 @@ public class RecieptPage extends JFrame {
 		panel.add(panel_1);
 		panel_1.setLayout(null);
 		
-		JLabel lblName_1 = new JLabel("NAME:" +name);
+		JLabel lblName_1 = new JLabel("NAME:");
 		lblName_1.setFont(new Font("Arial", Font.BOLD, 15));
 		lblName_1.setBounds(10, 39, 129, 23);
 		panel_1.add(lblName_1);
 		
-		JLabel lblName_1_1 = new JLabel("CINEMA TYPE:" +type);
+		JLabel lblName_1_1 = new JLabel("CINEMA TYPE:");
 		lblName_1_1.setFont(new Font("Arial", Font.BOLD, 15));
 		lblName_1_1.setBounds(9, 81, 129, 23);
 		panel_1.add(lblName_1_1);
 		
-		JLabel lblName_1_2 = new JLabel("MOVIE:" +movie);
+		JLabel lblName_1_2 = new JLabel("MOVIE:");
 		lblName_1_2.setFont(new Font("Arial", Font.BOLD, 15));
 		lblName_1_2.setBounds(10, 121, 129, 23);
 		panel_1.add(lblName_1_2);
 		
-		JLabel lblDate = new JLabel("DATE:" +date);
+		JLabel lblDate = new JLabel("DATE:");
 		lblDate.setFont(new Font("Arial", Font.BOLD, 15));
 		lblDate.setBounds(10, 163, 129, 23);
 		panel_1.add(lblDate);
 		
-		JLabel lblTime = new JLabel("TIME:" +time);
+		JLabel lblTime = new JLabel("TIME:");
 		lblTime.setFont(new Font("Arial", Font.BOLD, 15));
 		lblTime.setBounds(10, 201, 129, 23);
 		panel_1.add(lblTime);
 		
-		JLabel lblHallNum = new JLabel("HALL NUMBER:" +hallNum);
+		JLabel lblHallNum = new JLabel("HALL NUMBER:");
 		lblHallNum.setFont(new Font("Arial", Font.BOLD, 15));
 		lblHallNum.setBounds(10, 245, 129, 23);
 		panel_1.add(lblHallNum);
 		
-		JLabel lblSeatNum = new JLabel("SEAT NUMBER:" +seat);
+		JLabel lblSeatNum = new JLabel("SEAT NUMBER:");
 		lblSeatNum.setFont(new Font("Arial", Font.BOLD, 15));
 		lblSeatNum.setBounds(10, 290, 129, 23);
 		panel_1.add(lblSeatNum);
@@ -124,32 +124,32 @@ public class RecieptPage extends JFrame {
 		separator.setBounds(429, 29, 14, 354);
 		panel_1.add(separator);
 		
-		JLabel lblAdult = new JLabel("ADULT:" +spinnerAdult1);
+		JLabel lblAdult = new JLabel("ADULT:");
 		lblAdult.setFont(new Font("Arial", Font.BOLD, 15));
 		lblAdult.setBounds(453, 39, 168, 23);
 		panel_1.add(lblAdult);
 		
-		JLabel lblChildren = new JLabel("CHILDREN:" +spinnerChildren1);
+		JLabel lblChildren = new JLabel("CHILDREN:");
 		lblChildren.setFont(new Font("Arial", Font.BOLD, 15));
 		lblChildren.setBounds(453, 81, 168, 23);
 		panel_1.add(lblChildren);
 		
-		JLabel lblFoodBeverages = new JLabel("FOOD & BEVERAGES:" +comboBox1);
+		JLabel lblFoodBeverages = new JLabel("FOOD & BEVERAGES:");
 		lblFoodBeverages.setFont(new Font("Arial", Font.BOLD, 15));
 		lblFoodBeverages.setBounds(453, 121, 168, 23);
 		panel_1.add(lblFoodBeverages);
 		
-		JLabel lblFoodBeverages_1 = new JLabel("FOOD & BEVERAGES:" +comboBox2);
+		JLabel lblFoodBeverages_1 = new JLabel("FOOD & BEVERAGES:");
 		lblFoodBeverages_1.setFont(new Font("Arial", Font.BOLD, 15));
 		lblFoodBeverages_1.setBounds(453, 163, 168, 23);
 		panel_1.add(lblFoodBeverages_1);
 		
-		JLabel lblFoodBeverages_2 = new JLabel("FOOD & BEVERAGES:" +comboBox3);
+		JLabel lblFoodBeverages_2 = new JLabel("FOOD & BEVERAGES:");
 		lblFoodBeverages_2.setFont(new Font("Arial", Font.BOLD, 15));
 		lblFoodBeverages_2.setBounds(453, 201, 168, 23);
 		panel_1.add(lblFoodBeverages_2);
 		
-		JLabel lblMembership = new JLabel("MEMBERSHIP:" +membership1);
+		JLabel lblMembership = new JLabel("MEMBERSHIP:");
 		lblMembership.setFont(new Font("Arial", Font.BOLD, 15));
 		lblMembership.setBounds(453, 245, 168, 23);
 		panel_1.add(lblMembership);
@@ -179,35 +179,35 @@ public class RecieptPage extends JFrame {
 		separator_1_1.setBounds(168, 0, 11, 333);
 		panelPrice2.add(separator_1_1);
 		
-		JLabel lblAdultans = new JLabel("AdultAns");
+		JLabel lblAdultans = new JLabel(""+spinnerAdult1);
 		lblAdultans.setFont(new Font("Arial", Font.BOLD, 15));
 		lblAdultans.setBounds(10, 1, 158, 23);
 		panelPrice2.add(lblAdultans);
 		
-		JLabel lblTimePurchaseAns_8_1 = new JLabel("ChildrenAns");
-		lblTimePurchaseAns_8_1.setFont(new Font("Arial", Font.BOLD, 15));
-		lblTimePurchaseAns_8_1.setBounds(9, 41, 158, 23);
-		panelPrice2.add(lblTimePurchaseAns_8_1);
+		JLabel lblChildrenAns = new JLabel(""+spinnerChildren1);
+		lblChildrenAns.setFont(new Font("Arial", Font.BOLD, 15));
+		lblChildrenAns.setBounds(9, 41, 158, 23);
+		panelPrice2.add(lblChildrenAns);
 		
-		JLabel lblTimePurchaseAns_8_2 = new JLabel("FnB1Ans");
-		lblTimePurchaseAns_8_2.setFont(new Font("Arial", Font.BOLD, 15));
-		lblTimePurchaseAns_8_2.setBounds(10, 80, 158, 23);
-		panelPrice2.add(lblTimePurchaseAns_8_2);
+		JLabel lblFnB1Ans = new JLabel(comboBox1);
+		lblFnB1Ans.setFont(new Font("Arial", Font.BOLD, 15));
+		lblFnB1Ans.setBounds(10, 80, 158, 23);
+		panelPrice2.add(lblFnB1Ans);
 		
-		JLabel lblTimePurchaseAns_8_3 = new JLabel("FnB2Ans");
-		lblTimePurchaseAns_8_3.setFont(new Font("Arial", Font.BOLD, 15));
-		lblTimePurchaseAns_8_3.setBounds(10, 122, 158, 23);
-		panelPrice2.add(lblTimePurchaseAns_8_3);
+		JLabel lblFnB2Ans = new JLabel(comboBox2);
+		lblFnB2Ans.setFont(new Font("Arial", Font.BOLD, 15));
+		lblFnB2Ans.setBounds(10, 122, 158, 23);
+		panelPrice2.add(lblFnB2Ans);
 		
-		JLabel lblTimePurchaseAns_8_4 = new JLabel("FnB3Ans");
-		lblTimePurchaseAns_8_4.setFont(new Font("Arial", Font.BOLD, 15));
-		lblTimePurchaseAns_8_4.setBounds(10, 160, 158, 23);
-		panelPrice2.add(lblTimePurchaseAns_8_4);
+		JLabel lblFnB3Ans = new JLabel(comboBox3);
+		lblFnB3Ans.setFont(new Font("Arial", Font.BOLD, 15));
+		lblFnB3Ans.setBounds(10, 160, 158, 23);
+		panelPrice2.add(lblFnB3Ans);
 		
-		JLabel lblTimePurchaseAns_8_5 = new JLabel("MembershipAns");
-		lblTimePurchaseAns_8_5.setFont(new Font("Arial", Font.BOLD, 15));
-		lblTimePurchaseAns_8_5.setBounds(10, 207, 158, 23);
-		panelPrice2.add(lblTimePurchaseAns_8_5);
+		JLabel lblMemAns = new JLabel(membership1);
+		lblMemAns.setFont(new Font("Arial", Font.BOLD, 15));
+		lblMemAns.setBounds(10, 207, 158, 23);
+		panelPrice2.add(lblMemAns);
 		
 		JLabel lblAdultPriceAns = new JLabel("AdultPriceAns");
 		lblAdultPriceAns.setFont(new Font("Arial", Font.BOLD, 15));
@@ -239,6 +239,11 @@ public class RecieptPage extends JFrame {
 		lblMembershipPriceAns.setBounds(181, 207, 148, 23);
 		panelPrice2.add(lblMembershipPriceAns);
 		
+		JLabel lblTotalAns = new JLabel("RM" +priceformatter.format(totalTicket));
+		lblTotalAns.setFont(new Font("Arial", Font.BOLD, 15));
+		lblTotalAns.setBounds(181, 299, 148, 23);
+		panelPrice2.add(lblTotalAns);
+		
 		JLabel lblTimePurchase = new JLabel("TIME PURCHASE:");
 		lblTimePurchase.setFont(new Font("Arial", Font.BOLD, 15));
 		lblTimePurchase.setBounds(10, 335, 129, 23);
@@ -248,42 +253,42 @@ public class RecieptPage extends JFrame {
 		LocalDateTime now = LocalDateTime.now();
 		lblTimePurchaseAns.setText(dtf.format(now));
 		
-		JLabel lblTimeNameAns = new JLabel("NameAns");
+		JLabel lblTimeNameAns = new JLabel(name);
 		lblTimeNameAns.setFont(new Font("Arial", Font.BOLD, 15));
 		lblTimeNameAns.setBounds(9, 0, 256, 23);
 		panelPrice1.add(lblTimeNameAns);
 		
-		JLabel lblCinemaans = new JLabel("CinemaAns");
+		JLabel lblCinemaans = new JLabel(type);
 		lblCinemaans.setFont(new Font("Arial", Font.BOLD, 15));
 		lblCinemaans.setBounds(9, 42, 256, 23);
 		panelPrice1.add(lblCinemaans);
 		
-		JLabel lblMovieans = new JLabel("MovieAns");
+		JLabel lblMovieans = new JLabel(movie);
 		lblMovieans.setFont(new Font("Arial", Font.BOLD, 15));
 		lblMovieans.setBounds(9, 82, 256, 23);
 		panelPrice1.add(lblMovieans);
 		
-		JLabel lblDateans = new JLabel("DateAns");
+		JLabel lblDateans = new JLabel(date);
 		lblDateans.setFont(new Font("Arial", Font.BOLD, 15));
 		lblDateans.setBounds(9, 124, 256, 23);
 		panelPrice1.add(lblDateans);
 		
-		JLabel lblTimeans = new JLabel("TimeAns");
+		JLabel lblTimeans = new JLabel(time);
 		lblTimeans.setFont(new Font("Arial", Font.BOLD, 15));
 		lblTimeans.setBounds(9, 163, 256, 23);
 		panelPrice1.add(lblTimeans);
 		
-		JLabel lblHallnumans = new JLabel("HallNumAns");
+		JLabel lblHallnumans = new JLabel(hallNum);
 		lblHallnumans.setFont(new Font("Arial", Font.BOLD, 15));
 		lblHallnumans.setBounds(9, 205, 256, 23);
 		panelPrice1.add(lblHallnumans);
 		
-		JLabel lblSeatans = new JLabel("SeatAns");
+		JLabel lblSeatans = new JLabel(seat);
 		lblSeatans.setFont(new Font("Arial", Font.BOLD, 15));
 		lblSeatans.setBounds(9, 249, 256, 23);
 		panelPrice1.add(lblSeatans);
 		
-		JLabel lblTotal = new JLabel("TOTAL:" +priceformatter.format(totalTicket));
+		JLabel lblTotal = new JLabel("TOTAL:");
 		lblTotal.setBounds(453, 337, 54, 18);
 		panel_1.add(lblTotal);
 		lblTotal.setFont(new Font("Arial", Font.BOLD, 15));

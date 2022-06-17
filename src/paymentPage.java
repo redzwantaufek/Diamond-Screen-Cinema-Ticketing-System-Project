@@ -66,7 +66,7 @@ public class paymentPage extends JFrame {
 		contentPane.add(panelConfirmPayment);
 		panelConfirmPayment.setLayout(null);
 		
-		JLabel lblName = new JLabel("NAME:" +name);
+		JLabel lblName = new JLabel("NAME: " +name);
 		lblName.setForeground(new Color(255, 255, 255));
 		lblName.setFont(new Font("Arial", Font.BOLD, 16));
 		lblName.setBounds(10, 28, 170, 43);
