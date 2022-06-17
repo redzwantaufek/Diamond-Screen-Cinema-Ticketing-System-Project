@@ -16,6 +16,7 @@ import javax.swing.JTextField;
 import javax.swing.JSpinner;
 import javax.swing.JRadioButton;
 import javax.swing.JList;
+import javax.swing.JOptionPane;
 import javax.swing.JComboBox;
 import javax.swing.DefaultComboBoxModel;
 import javax.swing.JCheckBox;
@@ -25,7 +26,8 @@ import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 
-public class FillInformation extends JFrame {
+public class FillInformation extends JFrame 
+{
 
 	private JPanel contentPane;
 	private JTextField textSeat;
@@ -228,7 +230,6 @@ public class FillInformation extends JFrame {
                 double textFnB1 = Double.parseDouble(textFnB2.getText());
                 double textFnB2 = Double.parseDouble(textFnB3.getText());
                 
-                
                 //Combobox1
                 if (((String) comboBoxFnB1.getSelectedItem()).equals("1. Nasi Kerabu"))
                 {
@@ -305,6 +306,7 @@ public class FillInformation extends JFrame {
 		textFnB1.setColumns(10);
 		textFnB1.setBackground(Color.WHITE);
 		textFnB1.setBounds(1177, 319, 142, 20);
+		textFnB1.setText("0");
 		contentPane.add(textFnB1);
 		
 		textFnB2 = new JTextField();
@@ -312,6 +314,7 @@ public class FillInformation extends JFrame {
 		textFnB2.setColumns(10);
 		textFnB2.setBackground(Color.WHITE);
 		textFnB2.setBounds(1177, 381, 142, 20);
+		textFnB2.setText("0");
 		contentPane.add(textFnB2);
 		
 		textFnB3 = new JTextField();
@@ -319,7 +322,32 @@ public class FillInformation extends JFrame {
 		textFnB3.setColumns(10);
 		textFnB3.setBackground(Color.WHITE);
 		textFnB3.setBounds(1177, 442, 142, 20);
+		textFnB3.setText("0");
 		contentPane.add(textFnB3);
+		
+		JButton btnReset = new JButton("Reset");
+		btnReset.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				if (e.getSource() == btnReset)
+				{
+					spinnerAdult.setValue(0);
+					spinnerChildren.setValue(0);
+					rdbtnMembership.setSelected(false);
+					rdbtnNonMembership.setSelected(false);
+					comboBoxFnB1.setSelectedItem("");
+					comboBoxFnB2.setSelectedItem("");
+					comboBoxFnB3.setSelectedItem("");
+					textFnB1.setText("0");
+					textFnB2.setText("0");
+					textFnB3.setText("0");
+				}
+				
+			}
+		});
+		btnReset.setFont(new Font("Arial", Font.PLAIN, 11));
+		btnReset.setBackground(Color.WHITE);
+		btnReset.setBounds(1177, 476, 142, 23);
+		contentPane.add(btnReset);
 	}
 	
 	public void actionPerformed(ActionEvent e) {

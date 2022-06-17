@@ -31,6 +31,7 @@ import javax.swing.JButton;
 import javax.swing.border.LineBorder;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import java.awt.SystemColor;
 
 public class WelcomePage extends JFrame {
 
@@ -214,14 +215,15 @@ public class WelcomePage extends JFrame {
 		
 		JPanel panel = new JPanel();
 		panel.setForeground(new Color(255, 255, 255));
-		panel.setBorder(new TitledBorder(new LineBorder(new Color(255, 255, 255)), "CURRENT TIME", TitledBorder.CENTER, TitledBorder.TOP, null, new Color(255, 255, 255)));
-		panel.setBackground(new Color(0, 102, 102));
+		panel.setBorder(new TitledBorder(new LineBorder(new Color(0, 0, 0)), "CURRENT TIME", TitledBorder.CENTER, TitledBorder.TOP, null, new Color(0, 0, 0)));
+		panel.setBackground(new Color(245, 245, 245));
 		panel.setBounds(26, 15, 365, 78);
 		panelsShowtime.add(panel);
 		panel.setLayout(null);
 		
 		JLabel dateTime = new JLabel("Dynamic Clock");
-		dateTime.setForeground(new Color(255, 255, 255));
+		dateTime.setBackground(new Color(255, 255, 255));
+		dateTime.setForeground(new Color(0, 0, 0));
 		dateTime.setFont(new Font("Arial", Font.BOLD, 20));
 		dateTime.setHorizontalAlignment(SwingConstants.CENTER);
 		dateTime.setBounds(10, 21, 345, 41);

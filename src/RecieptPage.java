@@ -161,7 +161,7 @@ public class RecieptPage extends JFrame {
 		
 		JLabel lblTimePurchaseAns = new JLabel("TIME PURCHASE:");
 		lblTimePurchaseAns.setFont(new Font("Arial", Font.BOLD, 15));
-		lblTimePurchaseAns.setBounds(10, 299, 256, 23);
+		lblTimePurchaseAns.setBounds(9, 296, 256, 23);
 		panelPrice1.add(lblTimePurchaseAns);
 		
 		JPanel panelPrice2 = new JPanel();
