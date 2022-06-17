@@ -2,6 +2,7 @@ import java.awt.BorderLayout;
 import java.awt.Dimension;
 import java.awt.EventQueue;
 import java.awt.Toolkit;
+import java.text.DecimalFormat;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
@@ -14,17 +15,16 @@ import javax.swing.border.TitledBorder;
 import java.awt.Font;
 import javax.swing.JSeparator;
 import javax.swing.JButton;
-import java.awt.event.ActionListener;
-import java.awt.event.ActionEvent;
 
 public class paymentPage extends JFrame {
 
+	DecimalFormat priceformatter = new DecimalFormat ("#0.00");
 	private JPanel contentPane;
 
 	/**
 	 * Launch the application.
 	 */
-	public static void main(String[] args) {
+	/*public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
@@ -40,7 +40,7 @@ public class paymentPage extends JFrame {
 	/**
 	 * Create the frame.
 	 */
-	public paymentPage() {
+	public paymentPage(String type, String movie, String date, String time, int spinnerAdult1,int spinnerChildren1, double totalTicket, String comboBox1, String comboBox2, String comboBox3,String hallNum,int seat,String membership1) {
 		setTitle("DIAMOND SCREEN CINEMA (DSC)");
 		setResizable(false);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -66,62 +66,62 @@ public class paymentPage extends JFrame {
 		
 		JLabel lblName = new JLabel("NAME:");
 		lblName.setForeground(new Color(255, 255, 255));
-		lblName.setFont(new Font("Arial", Font.BOLD, 15));
+		lblName.setFont(new Font("Arial", Font.BOLD, 16));
 		lblName.setBounds(10, 28, 170, 43);
 		panelConfirmPayment.add(lblName);
 		
-		JLabel lblCinemaType = new JLabel("CINEMA TYPE:");
+		JLabel lblCinemaType = new JLabel("CINEMA TYPE: " +type);
 		lblCinemaType.setForeground(Color.WHITE);
-		lblCinemaType.setFont(new Font("Arial", Font.BOLD, 15));
-		lblCinemaType.setBounds(10, 82, 170, 43);
+		lblCinemaType.setFont(new Font("Arial", Font.BOLD, 16));
+		lblCinemaType.setBounds(10, 82, 334, 43);
 		panelConfirmPayment.add(lblCinemaType);
 		
-		JLabel lblMovie = new JLabel("MOVIE:");
+		JLabel lblMovie = new JLabel("MOVIE: " +movie);
 		lblMovie.setForeground(Color.WHITE);
-		lblMovie.setFont(new Font("Arial", Font.BOLD, 15));
-		lblMovie.setBounds(10, 136, 170, 43);
+		lblMovie.setFont(new Font("Arial", Font.BOLD, 16));
+		lblMovie.setBounds(10, 136, 334, 43);
 		panelConfirmPayment.add(lblMovie);
 		
-		JLabel lblDate = new JLabel("DATE:");
+		JLabel lblDate = new JLabel("DATE: " +date);
 		lblDate.setForeground(Color.WHITE);
-		lblDate.setFont(new Font("Arial", Font.BOLD, 15));
-		lblDate.setBounds(10, 190, 170, 43);
+		lblDate.setFont(new Font("Arial", Font.BOLD, 16));
+		lblDate.setBounds(10, 190, 334, 43);
 		panelConfirmPayment.add(lblDate);
 		
-		JLabel lblTime = new JLabel("TIME:");
+		JLabel lblTime = new JLabel("TIME: " +time);
 		lblTime.setForeground(Color.WHITE);
-		lblTime.setFont(new Font("Arial", Font.BOLD, 15));
-		lblTime.setBounds(10, 244, 170, 43);
+		lblTime.setFont(new Font("Arial", Font.BOLD, 16));
+		lblTime.setBounds(10, 244, 334, 43);
 		panelConfirmPayment.add(lblTime);
 		
-		JLabel lblHallNum = new JLabel("HALL NUMBER:");
+		JLabel lblHallNum = new JLabel("HALL NUMBER: " +hallNum);
 		lblHallNum.setForeground(Color.WHITE);
-		lblHallNum.setFont(new Font("Arial", Font.BOLD, 15));
-		lblHallNum.setBounds(10, 299, 170, 43);
+		lblHallNum.setFont(new Font("Arial", Font.BOLD, 16));
+		lblHallNum.setBounds(10, 299, 334, 43);
 		panelConfirmPayment.add(lblHallNum);
 		
-		JLabel lblSeatNum = new JLabel("SEAT NUMBER");
+		JLabel lblSeatNum = new JLabel("SEAT NUMBER " +seat);
 		lblSeatNum.setForeground(Color.WHITE);
-		lblSeatNum.setFont(new Font("Arial", Font.BOLD, 15));
-		lblSeatNum.setBounds(10, 353, 170, 43);
+		lblSeatNum.setFont(new Font("Arial", Font.BOLD, 16));
+		lblSeatNum.setBounds(10, 353, 334, 43);
 		panelConfirmPayment.add(lblSeatNum);
 		
-		JLabel lblAdult = new JLabel("ADULT:");
+		JLabel lblAdult = new JLabel("ADULT: " +spinnerAdult1);
 		lblAdult.setForeground(Color.WHITE);
-		lblAdult.setFont(new Font("Arial", Font.BOLD, 15));
-		lblAdult.setBounds(383, 28, 184, 43);
+		lblAdult.setFont(new Font("Arial", Font.BOLD, 16));
+		lblAdult.setBounds(383, 28, 407, 43);
 		panelConfirmPayment.add(lblAdult);
 		
-		JLabel lblChildren = new JLabel("CHILDREN:");
+		JLabel lblChildren = new JLabel("CHILDREN: " +spinnerChildren1);
 		lblChildren.setForeground(Color.WHITE);
-		lblChildren.setFont(new Font("Arial", Font.BOLD, 15));
-		lblChildren.setBounds(383, 82, 184, 43);
+		lblChildren.setFont(new Font("Arial", Font.BOLD, 16));
+		lblChildren.setBounds(383, 82, 407, 43);
 		panelConfirmPayment.add(lblChildren);
 		
-		JLabel lblMember = new JLabel("MEMBERSHIP:");
+		JLabel lblMember = new JLabel("MEMBERSHIP: " +membership1);
 		lblMember.setForeground(Color.WHITE);
-		lblMember.setFont(new Font("Arial", Font.BOLD, 15));
-		lblMember.setBounds(383, 299, 184, 43);
+		lblMember.setFont(new Font("Arial", Font.BOLD, 16));
+		lblMember.setBounds(383, 299, 407, 43);
 		panelConfirmPayment.add(lblMember);
 		
 		JSeparator separator = new JSeparator();
@@ -129,38 +129,31 @@ public class paymentPage extends JFrame {
 		separator.setBounds(354, 11, 19, 404);
 		panelConfirmPayment.add(separator);
 		
-		JLabel lblFnB1 = new JLabel("FOOD & BEVERAGES 1:");
+		JLabel lblFnB1 = new JLabel("FOOD & BEVERAGES 1: " +comboBox1);
 		lblFnB1.setForeground(Color.WHITE);
-		lblFnB1.setFont(new Font("Arial", Font.BOLD, 15));
-		lblFnB1.setBounds(383, 136, 198, 43);
+		lblFnB1.setFont(new Font("Arial", Font.BOLD, 16));
+		lblFnB1.setBounds(383, 136, 407, 43);
 		panelConfirmPayment.add(lblFnB1);
 		
-		JLabel lblFnB2 = new JLabel("FOOD & BEVERAGES 2:");
+		JLabel lblFnB2 = new JLabel("FOOD & BEVERAGES 2: " +comboBox2);
 		lblFnB2.setForeground(Color.WHITE);
-		lblFnB2.setFont(new Font("Arial", Font.BOLD, 15));
-		lblFnB2.setBounds(383, 190, 198, 43);
+		lblFnB2.setFont(new Font("Arial", Font.BOLD, 16));
+		lblFnB2.setBounds(383, 190, 407, 43);
 		panelConfirmPayment.add(lblFnB2);
 		
-		JLabel lblFnB3 = new JLabel("FOOD & BEVERAGES 3:");
+		JLabel lblFnB3 = new JLabel("FOOD & BEVERAGES 3: " +comboBox3);
 		lblFnB3.setForeground(Color.WHITE);
-		lblFnB3.setFont(new Font("Arial", Font.BOLD, 15));
-		lblFnB3.setBounds(383, 244, 198, 43);
+		lblFnB3.setFont(new Font("Arial", Font.BOLD, 16));
+		lblFnB3.setBounds(383, 244, 407, 43);
 		panelConfirmPayment.add(lblFnB3);
 		
-		JLabel lblTotal = new JLabel("TOTAL:");
+		JLabel lblTotal = new JLabel("TOTAL: RM " +priceformatter.format(totalTicket));
 		lblTotal.setForeground(Color.WHITE);
-		lblTotal.setFont(new Font("Arial", Font.BOLD, 15));
-		lblTotal.setBounds(383, 353, 184, 43);
+		lblTotal.setFont(new Font("Arial", Font.BOLD, 16));
+		lblTotal.setBounds(383, 353, 407, 43);
 		panelConfirmPayment.add(lblTotal);
 		
 		JButton btnConfirm = new JButton("CONFIRM");
-		btnConfirm.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-						RecieptPage a = new RecieptPage();
-						a.show();
-						dispose();
-			}
-		});
 		btnConfirm.setBackground(new Color(255, 255, 255));
 		btnConfirm.setFont(new Font("Arial", Font.BOLD, 11));
 		btnConfirm.setBounds(901, 365, 89, 23);
