@@ -15,6 +15,8 @@ import javax.swing.border.TitledBorder;
 import java.awt.Font;
 import javax.swing.JSeparator;
 import javax.swing.JButton;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
 public class paymentPage extends JFrame {
 
@@ -40,7 +42,7 @@ public class paymentPage extends JFrame {
 	/**
 	 * Create the frame.
 	 */
-	public paymentPage(String type, String movie, String date, String time, int spinnerAdult1,int spinnerChildren1, double totalTicket, String comboBox1, String comboBox2, String comboBox3,String hallNum,int seat,String membership1) {
+	public paymentPage(String type, String movie, String date, String time, int spinnerAdult1,int spinnerChildren1,double totalTicket, String comboBox1, String comboBox2, String comboBox3,String hallNum,String seat,String membership1) {
 		setTitle("DIAMOND SCREEN CINEMA (DSC)");
 		setResizable(false);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -100,7 +102,7 @@ public class paymentPage extends JFrame {
 		lblHallNum.setBounds(10, 299, 334, 43);
 		panelConfirmPayment.add(lblHallNum);
 		
-		JLabel lblSeatNum = new JLabel("SEAT NUMBER " +seat);
+		JLabel lblSeatNum = new JLabel("SEAT NUMBER: " +seat);
 		lblSeatNum.setForeground(Color.WHITE);
 		lblSeatNum.setFont(new Font("Arial", Font.BOLD, 16));
 		lblSeatNum.setBounds(10, 353, 334, 43);
@@ -154,6 +156,14 @@ public class paymentPage extends JFrame {
 		panelConfirmPayment.add(lblTotal);
 		
 		JButton btnConfirm = new JButton("CONFIRM");
+		btnConfirm.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+
+				RecieptPage a = new RecieptPage();
+				a.show();
+				dispose();
+			}
+		});
 		btnConfirm.setBackground(new Color(255, 255, 255));
 		btnConfirm.setFont(new Font("Arial", Font.BOLD, 11));
 		btnConfirm.setBounds(901, 365, 89, 23);

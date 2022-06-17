@@ -59,7 +59,7 @@ public class FillInformation extends JFrame
 	/**
 	 * Create the frame.
 	 */
-	public FillInformation(String type, String movie, String date, String time) {
+	public FillInformation(String type, String movie, String date, String time,double pricetype) {
 		setTitle("DIAMOND SCREEN CINEMA(DSC)");
 		setResizable(false);
 		setIconImage(Toolkit.getDefaultToolkit().getImage("C:\\Users\\taufe\\Documents\\Lecture\\Semester 2\\Object Oriented Programming(SWC2333)\\Kerja\\Assignment group\\Gambo\\Gold Line art Video Camera for Movie Cinema Production Logo (200 \u00D7 200 px).png"));
@@ -108,7 +108,7 @@ public class FillInformation extends JFrame
 		comboBoxHallNum.setBackground(Color.WHITE);
 		comboBoxHallNum.setBounds(1177, 72, 142, 19);
 		contentPane.add(comboBoxHallNum);
-		
+
 		JLabel lblSeatNumber = new JLabel("SEAT NUMBER");
 		lblSeatNumber.setForeground(new Color(255, 255, 255));
 		lblSeatNumber.setFont(new Font("Arial", Font.BOLD, 13));
@@ -187,13 +187,13 @@ public class FillInformation extends JFrame
 		JComboBox comboBoxFnB1 = new JComboBox();
 		comboBoxFnB1.setBackground(new Color(255, 255, 255));
 		comboBoxFnB1.setFont(new Font("Arial", Font.PLAIN, 11));
-		comboBoxFnB1.setModel(new DefaultComboBoxModel(new String[] {"", "1. Nasi Kerabu", "2. Popcorn", "3. Soda Drink", "4.Hot Dog"}));
+		comboBoxFnB1.setModel(new DefaultComboBoxModel(new String[] {"", "1. Nasi Kerabu", "2. Popcorn", "3. Soda Drink", "4. Hot Dog"}));
 		comboBoxFnB1.setBounds(1177, 289, 142, 19);
 		contentPane.add(comboBoxFnB1);
 		
 		JComboBox comboBoxFnB2 = new JComboBox();
 		comboBoxFnB2.setBackground(new Color(255, 255, 255));
-		comboBoxFnB2.setModel(new DefaultComboBoxModel(new String[] {"", "1. Nasi Kerabu", "2. Popcorn", "3. Soda Drink", "4.Hot Dog"}));
+		comboBoxFnB2.setModel(new DefaultComboBoxModel(new String[] {"", "1. Nasi Kerabu", "2. Popcorn", "3. Soda Drink", "4. Hot Dog"}));
 		comboBoxFnB2.setFont(new Font("Arial", Font.PLAIN, 11));
 		comboBoxFnB2.setBounds(1177, 412, 142, 19);
 		contentPane.add(comboBoxFnB2);
@@ -201,7 +201,7 @@ public class FillInformation extends JFrame
 		JComboBox comboBoxFnB3 = new JComboBox();
 		comboBoxFnB3.setBackground(new Color(255, 255, 255));
 		comboBoxFnB3.setFont(new Font("Arial", Font.PLAIN, 11));
-		comboBoxFnB3.setModel(new DefaultComboBoxModel(new String[] {"", "1. Nasi Kerabu", "2. Popcorn", "3. Soda Drink", "4.Hot Dog"}));
+		comboBoxFnB3.setModel(new DefaultComboBoxModel(new String[] {"", "1. Nasi Kerabu", "2. Popcorn", "3. Soda Drink", "4. Hot Dog"}));
 		comboBoxFnB3.setBounds(1177, 350, 142, 19);
 		contentPane.add(comboBoxFnB3);
 		
@@ -223,22 +223,22 @@ public class FillInformation extends JFrame
 		btnProceed.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				int spinnerAdult1 = (int) spinnerAdult.getValue();
-                int spinnerChildren1 = (int) spinnerChildren.getValue();
+                int  spinnerChildren1 = (int) spinnerChildren.getValue();
                 double price = 0.0;
                 double textFnB = Double.parseDouble(textFnB1.getText());
                 double textFnB1 = Double.parseDouble(textFnB2.getText());
                 double textFnB2 = Double.parseDouble(textFnB3.getText());
                 double discount = 0.0;
-                int seat = Integer.parseInt(textSeat.getText());
+                String seat = textSeat.getText();
                 
                 String membership1 = (rdbtnMembership).toString();
                 if (rdbtnMembership.isSelected() == true)
                 {
-                	membership1 = "Membership";
+                	membership1 = "Yes";
                 }
                 else if (rdbtnMembership.isSelected() == false)
                 {
-                	membership1 = "NonMembership";
+                	membership1 = "No";
                 }
                 
                 String hallNum = (String)comboBoxHallNum.getSelectedItem();
@@ -294,6 +294,11 @@ public class FillInformation extends JFrame
                 	comboBox1 ="Hot Dog";
                     price = 6.50;
                 }
+                else
+                {
+                	comboBox1 = " ";
+                	price = 0.0;
+                }
 
                 //ComboBox2
                 String comboBox2 = (String)comboBoxFnB2.getSelectedItem();
@@ -317,6 +322,11 @@ public class FillInformation extends JFrame
                 {
                 	comboBox2 ="Hot Dog";
                     price = 6.50;
+                }
+                else
+                {
+                	comboBox2 = " ";
+                	price = 0.0;
                 }
 
                 //ComboBox3
@@ -342,8 +352,13 @@ public class FillInformation extends JFrame
                 	comboBox3 ="Hot Dog";
                     price = 6.50;
                 }
-        
-                double totalTicket = (spinnerAdult1 * 15) + (spinnerChildren1 *12) + (price * textFnB) + (price * textFnB1) + (price * textFnB2) - (membership);
+                else
+                {
+                	comboBox3 = " ";
+                	price = 0.0;
+                }
+                
+                double totalTicket = (spinnerAdult1 * 5) + (spinnerAdult1 * pricetype) + (spinnerChildren1 * 3) +(spinnerChildren1 * pricetype) + (price * textFnB) + (price * textFnB1) + (price * textFnB2) - (membership);
 				paymentPage a = new paymentPage(type,movie,date,time,spinnerAdult1,spinnerChildren1,totalTicket,comboBox1,comboBox2,comboBox3,hallNum,seat,membership1);
 				a.show();
 				dispose();
@@ -407,6 +422,11 @@ public class FillInformation extends JFrame
                 	comboBox1 ="Hot Dog";
                     price = 6.50;
                 }
+                else
+                {
+                	comboBox1 = " ";
+                	price = 0.0;
+                }
 
                 //ComboBox2
                 String comboBox2 = (String)comboBoxFnB2.getSelectedItem();
@@ -430,6 +450,11 @@ public class FillInformation extends JFrame
                 {
                 	comboBox2 ="Hot Dog";
                     price = 6.50;
+                }
+                else
+                {
+                	comboBox2 = " ";
+                	price = 0.0;
                 }
 
                 //ComboBox3
@@ -455,8 +480,13 @@ public class FillInformation extends JFrame
                 	comboBox3 ="Hot Dog";
                     price = 6.50;
                 }
+                else
+                {
+                	comboBox3 = " ";
+                	price = 0.0;
+                }
                 
-                double totalTicket = (spinnerAdult1 * 15) + (spinnerChildren1 *12) + (price * textFnB) + (price * textFnB1) + (price * textFnB2) - (membership);
+                double totalTicket = (spinnerAdult1 * 5) + (spinnerAdult1 * pricetype) + (spinnerChildren1 * 3) +(spinnerChildren1 * pricetype) + (price * textFnB) + (price * textFnB1) + (price * textFnB2) - (membership);
                 textTotal.setText("" +priceformatter.format(totalTicket));
             }
         });

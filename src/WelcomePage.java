@@ -196,26 +196,34 @@ public class WelcomePage extends JFrame {
 		btnNext.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				
+				double pricetype = 0.0;
+				
 				String type = (String)comboBoxCinemaType.getSelectedItem();
 				if (((String)comboBoxCinemaType.getSelectedItem()).equals("1. Classic"))
 				{
 					type = "Classic";
+					pricetype = 10;
 				}
 				else if (((String)comboBoxCinemaType.getSelectedItem()).equals("2. Dolby Cinema"))
 				{
 					type = "Dolby Cinema";
+					pricetype = 25;
+					
 				}
 				else if (((String)comboBoxCinemaType.getSelectedItem()).equals("3. IMAX Cinema"))
 				{
 					type = "IMAX Cinema";
+					pricetype = 25;
 				}
 				else if (((String)comboBoxCinemaType.getSelectedItem()).equals("4. Deluxe"))
 				{
 					type = "Deluxe";
+					pricetype = 30;
 				}
 				else if (((String)comboBoxCinemaType.getSelectedItem()).equals("5. Luxury"))
 				{
 					type = "Luxury";
+					pricetype = 40;
 				}
 				
 				String movie = (String)comboBoxMovie.getSelectedItem();
@@ -312,7 +320,7 @@ public class WelcomePage extends JFrame {
 					time =  "12:10";
 				}
 				
-				FillInformation a = new FillInformation(type,movie,date,time);
+				FillInformation a = new FillInformation(type,movie,date,time,pricetype);
 				a.show();
 				dispose();
 				
