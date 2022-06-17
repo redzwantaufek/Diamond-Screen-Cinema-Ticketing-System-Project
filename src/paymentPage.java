@@ -158,8 +158,8 @@ public class paymentPage extends JFrame {
 		JButton btnConfirm = new JButton("CONFIRM");
 		btnConfirm.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-
-				RecieptPage a = new RecieptPage();
+				
+				RecieptPage a = new RecieptPage(name, type,movie,date,time,spinnerAdult1,spinnerChildren1,totalTicket,comboBox1,comboBox2,comboBox3,hallNum,seat,membership1);
 				a.show();
 				dispose();
 			}
