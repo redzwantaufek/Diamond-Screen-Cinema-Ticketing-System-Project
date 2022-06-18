@@ -51,6 +51,7 @@ public class WelcomePage extends JFrame {
 	/**
 	 * Create the frame.
 	 */
+	//
 	public WelcomePage(String name) {
 		setResizable(false);
 		setIconImage(Toolkit.getDefaultToolkit().getImage("C:\\Users\\taufe\\Documents\\Lecture\\Semester 2\\Object Oriented Programming(SWC2333)\\Kerja\\Assignment group\\Gambo\\Gold Line art Video Camera for Movie Cinema Production Logo (200 \u00D7 200 px).png"));
