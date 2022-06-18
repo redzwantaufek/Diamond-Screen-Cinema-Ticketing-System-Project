@@ -17,6 +17,8 @@ import javax.swing.JSeparator;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import javax.swing.JComboBox;
+import javax.swing.DefaultComboBoxModel;
 
 public class paymentPage extends JFrame {
 
@@ -96,65 +98,143 @@ public class paymentPage extends JFrame {
 		JLabel lblAdult = new JLabel("ADULT: " +spinnerAdult1);
 		lblAdult.setForeground(Color.WHITE);
 		lblAdult.setFont(new Font("Arial", Font.BOLD, 16));
-		lblAdult.setBounds(484, 28, 407, 43);
+		lblAdult.setBounds(385, 28, 407, 43);
 		panelConfirmPayment.add(lblAdult);
 		
 		JLabel lblChildren = new JLabel("CHILDREN: " +spinnerChildren1);
 		lblChildren.setForeground(Color.WHITE);
 		lblChildren.setFont(new Font("Arial", Font.BOLD, 16));
-		lblChildren.setBounds(484, 82, 407, 43);
+		lblChildren.setBounds(385, 82, 407, 43);
 		panelConfirmPayment.add(lblChildren);
 		
 		JLabel lblMember = new JLabel("MEMBERSHIP: " +membership1);
 		lblMember.setForeground(Color.WHITE);
 		lblMember.setFont(new Font("Arial", Font.BOLD, 16));
-		lblMember.setBounds(484, 299, 407, 43);
+		lblMember.setBounds(385, 299, 407, 43);
 		panelConfirmPayment.add(lblMember);
 		
 		JSeparator separator = new JSeparator();
 		separator.setOrientation(SwingConstants.VERTICAL);
-		separator.setBounds(455, 11, 19, 404);
+		separator.setBounds(367, 8, 19, 404);
 		panelConfirmPayment.add(separator);
 		
 		JLabel lblFnB1 = new JLabel("FOOD & BEVERAGES 1: " +comboBox1);
 		lblFnB1.setForeground(Color.WHITE);
 		lblFnB1.setFont(new Font("Arial", Font.BOLD, 16));
-		lblFnB1.setBounds(484, 136, 407, 43);
+		lblFnB1.setBounds(385, 136, 407, 43);
 		panelConfirmPayment.add(lblFnB1);
 		
 		JLabel lblFnB2 = new JLabel("FOOD & BEVERAGES 2: " +comboBox2);
 		lblFnB2.setForeground(Color.WHITE);
 		lblFnB2.setFont(new Font("Arial", Font.BOLD, 16));
-		lblFnB2.setBounds(484, 190, 407, 43);
+		lblFnB2.setBounds(385, 190, 407, 43);
 		panelConfirmPayment.add(lblFnB2);
 		
 		JLabel lblFnB3 = new JLabel("FOOD & BEVERAGES 3: " +comboBox3);
 		lblFnB3.setForeground(Color.WHITE);
 		lblFnB3.setFont(new Font("Arial", Font.BOLD, 16));
-		lblFnB3.setBounds(484, 244, 407, 43);
+		lblFnB3.setBounds(385, 244, 407, 43);
 		panelConfirmPayment.add(lblFnB3);
 		
 		JLabel lblTotal = new JLabel("TOTAL: RM " +priceformatter.format(totalTicket));
 		lblTotal.setForeground(Color.WHITE);
 		lblTotal.setFont(new Font("Arial", Font.BOLD, 16));
-		lblTotal.setBounds(484, 353, 311, 43);
+		lblTotal.setBounds(385, 353, 311, 43);
 		panelConfirmPayment.add(lblTotal);
 		
-		JButton btnConfirm = new JButton("CONFIRM");
-		btnConfirm.addActionListener(new ActionListener() {
+		JPanel panelPayOption = new JPanel();
+		panelPayOption.setBackground(new Color(255, 250, 240));
+		panelPayOption.setBounds(791, 16, 234, 338);
+		panelConfirmPayment.add(panelPayOption);
+		panelPayOption.setLayout(null);
+		
+		JLabel lblPayment = new JLabel("Payment ");
+		lblPayment.setHorizontalAlignment(SwingConstants.CENTER);
+		lblPayment.setForeground(new Color(0, 0, 0));
+		lblPayment.setFont(new Font("Arial", Font.BOLD, 16));
+		lblPayment.setBounds(10, 11, 214, 43);
+		panelPayOption.add(lblPayment);
+		
+		JLabel lblPayOption = new JLabel("");
+		lblPayOption.setForeground(new Color(0, 0, 0));
+		lblPayOption.setFont(new Font("Arial", Font.BOLD, 11));
+		lblPayOption.setBounds(116, 250, 108, 43);
+		panelPayOption.add(lblPayOption);
+		
+		JComboBox comboBoxPayOption = new JComboBox();
+		comboBoxPayOption.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				lblPayOption.setText(comboBoxPayOption.getSelectedItem().toString());
+			}
+		});
+		comboBoxPayOption.setModel(new DefaultComboBoxModel(new String[] {"", "Online Banking", "E-Wallet", "Credit or Debit Card", "Paypal", "Cryptocurrency"}));
+		comboBoxPayOption.setFont(new Font("Arial", Font.PLAIN, 15));
+		comboBoxPayOption.setBounds(10, 98, 214, 22);
+		panelPayOption.add(comboBoxPayOption);
+		
+
+		JLabel lblPay = new JLabel("Please Choose Your Payment Option");
+		lblPay.setHorizontalAlignment(SwingConstants.CENTER);
+		lblPay.setForeground(Color.BLACK);
+		lblPay.setFont(new Font("Arial", Font.BOLD, 11));
+		lblPay.setBounds(10, 57, 214, 30);
+		panelPayOption.add(lblPay);
+		
+		JLabel lblPayOption2 = new JLabel("PAYMENT OPTION:");
+		lblPayOption2.setForeground(Color.BLACK);
+		lblPayOption2.setFont(new Font("Arial", Font.BOLD, 11));
+		lblPayOption2.setBounds(10, 250, 108, 43);
+		panelPayOption.add(lblPayOption2);
+		
+		JButton btnPay = new JButton("PAY");
+		btnPay.setBounds(10, 304, 214, 23);
+		panelPayOption.add(btnPay);
+		btnPay.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				
-				RecieptPage a = new RecieptPage(name,type,movie,date,time,spinnerAdult1,spinnerChildren1,totalTicket,comboBox1,comboBox2,comboBox3,hallNum,seat,membership1,price,price1,price2,typeAdultPrice,typeChildPrice,membershipDiscount,textFnB,textFnB1,textFnB2);
+				String comboBoxPayOption1 = (String)comboBoxPayOption.getSelectedItem();
+				if (((String) comboBoxPayOption.getSelectedItem()).equals("Online Banking"))
+                {
+					comboBoxPayOption1 = "Online Banking";
+                    
+                }
+				else if (((String) comboBoxPayOption.getSelectedItem()).equals("E-Wallet"))
+                {
+					comboBoxPayOption1 = "E-Wallet";
+                    
+                }
+				else if (((String) comboBoxPayOption.getSelectedItem()).equals("Credit or Debit Card"))
+                {
+					comboBoxPayOption1 = "Credit or Debit Card";
+                    
+                }
+				else if (((String) comboBoxPayOption.getSelectedItem()).equals("Paypal"))
+                {
+					comboBoxPayOption1 = "Paypal";
+                    
+                }
+				else if (((String) comboBoxPayOption.getSelectedItem()).equals("Cryptocurrency"))
+                {
+					comboBoxPayOption1 = "Cryptocurrency";
+                    
+                }
+				else if (((String) comboBoxPayOption.getSelectedItem()).equals(""))
+                {
+					comboBoxPayOption1 = "";
+                    
+                }
+				
+				RecieptPage a = new RecieptPage(comboBoxPayOption1,name,type,movie,date,time,spinnerAdult1,spinnerChildren1,totalTicket,comboBox1,comboBox2,comboBox3,hallNum,seat,membership1,price,price1,price2,typeAdultPrice,typeChildPrice,membershipDiscount,textFnB,textFnB1,textFnB2);
 				a.show();
 				dispose();
 			}
 		});
-		btnConfirm.setBackground(new Color(255, 255, 255));
-		btnConfirm.setFont(new Font("Arial", Font.BOLD, 11));
-		btnConfirm.setBounds(901, 365, 89, 23);
-		panelConfirmPayment.add(btnConfirm);
+		btnPay.setBackground(new Color(255, 255, 255));
+		btnPay.setFont(new Font("Arial", Font.BOLD, 11));
 		
 		JButton btnBack = new JButton("BACK");
+		btnBack.setBounds(801, 365, 213, 23);
+		panelConfirmPayment.add(btnBack);
 		btnBack.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				FillInformation a = new FillInformation(name,type,movie,date,time, pricetype);
@@ -164,8 +244,6 @@ public class paymentPage extends JFrame {
 		});
 		btnBack.setFont(new Font("Arial", Font.PLAIN, 11));
 		btnBack.setBackground(Color.WHITE);
-		btnBack.setBounds(802, 365, 89, 23);
-		panelConfirmPayment.add(btnBack);
 		
 		JPanel panel = new JPanel();
 		panel.setBorder(new TitledBorder(null, "NOW SHOWING", TitledBorder.LEADING, TitledBorder.TOP, null, new Color(255, 255, 255)));

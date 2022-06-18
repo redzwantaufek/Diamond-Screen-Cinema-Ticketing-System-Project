@@ -359,7 +359,7 @@ public class FillInformation extends JFrame
                 	membershipDiscount = "" +priceformatter.format(membership);
                 }
                 
-                if(seat.equalsIgnoreCase("") || ((String)comboBoxHallNum.getSelectedItem()).equals("") || (!rdbtnMembership.isSelected()) || (spinnerAdult1 == 0) || (spinnerChildren1 == 0)) 
+                if(seat.equalsIgnoreCase("") || ((String)comboBoxHallNum.getSelectedItem()).equals("") || (!rdbtnMembership.isSelected())) 
                 {
                 	JOptionPane.showMessageDialog(null, "PLEASE SELECT THE OPTION", "ERROR", JOptionPane.ERROR_MESSAGE);
                 }

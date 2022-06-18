@@ -28,7 +28,7 @@ public class RecieptPage extends JFrame {
 	 * Create the frame.
 	 */
 	//
-	public RecieptPage(String name,String type, String movie, String date, String time, int spinnerAdult1,int spinnerChildren1,double totalTicket, String comboBox1, String comboBox2, String comboBox3,String hallNum,String seat,String membership1, double price,double price1,double price2,double typeAdultPrice,double typeChildPrice, String membershipDiscount,double textFnB,double textFnB1,double textFnB2) {
+	public RecieptPage(String comboBoxPayOption1,String name,String type, String movie, String date, String time, int spinnerAdult1,int spinnerChildren1,double totalTicket, String comboBox1, String comboBox2, String comboBox3,String hallNum,String seat,String membership1, double price,double price1,double price2,double typeAdultPrice,double typeChildPrice, String membershipDiscount,double textFnB,double textFnB1,double textFnB2) {
 		setTitle("DIAMOND SCREEN CINEMA (DSC)");
 		setResizable(false);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -240,6 +240,11 @@ public class RecieptPage extends JFrame {
 		textAreaTotal.setBounds(180, 295, 141, 20);
 		panelPrice2.add(textAreaTotal);
 		
+		JLabel lblOptionPayAns = new JLabel(comboBoxPayOption1);
+		lblOptionPayAns.setFont(new Font("Arial", Font.BOLD, 15));
+		lblOptionPayAns.setBounds(10, 252, 141, 23);
+		panelPrice2.add(lblOptionPayAns);
+		
 		JLabel lblTimePurchase = new JLabel("TIME PURCHASE:");
 		lblTimePurchase.setFont(new Font("Arial", Font.BOLD, 15));
 		lblTimePurchase.setBounds(10, 335, 129, 23);
@@ -288,6 +293,11 @@ public class RecieptPage extends JFrame {
 		lblTotal.setBounds(453, 337, 54, 18);
 		panel_1.add(lblTotal);
 		lblTotal.setFont(new Font("Arial", Font.BOLD, 15));
+		
+		JLabel lblPaymentOption = new JLabel("PAYMENT OPTION:");
+		lblPaymentOption.setFont(new Font("Arial", Font.BOLD, 15));
+		lblPaymentOption.setBounds(453, 290, 168, 23);
+		panel_1.add(lblPaymentOption);
 		
 		Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
         this.setLocation(dim.width/2-this.getSize().width/2, dim.height/2-this.getSize().height/2);
