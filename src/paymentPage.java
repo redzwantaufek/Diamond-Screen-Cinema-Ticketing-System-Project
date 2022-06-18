@@ -42,7 +42,7 @@ public class paymentPage extends JFrame {
 	 * Create the frame.
 	 */
 	//
-	public paymentPage(String name,String type, String movie, String date, String time, int spinnerAdult1,int spinnerChildren1,double totalTicket, String comboBox1, String comboBox2, String comboBox3,String hallNum,String seat,String membership1,double price,double price1,double price2,double typeAdultPrice,double typeChildPrice, String membershipDiscount,double textFnB,double textFnB1,double textFnB2) {
+	public paymentPage(String name,String type, String movie, String date, String time, int spinnerAdult1,int spinnerChildren1,double totalTicket, String comboBox1, String comboBox2, String comboBox3,String hallNum,String seat,String membership1,double price,double price1,double price2,double typeAdultPrice,double typeChildPrice, String membershipDiscount,double textFnB,double textFnB1,double textFnB2,double pricetype) {
 		setTitle("DIAMOND SCREEN CINEMA (DSC)");
 		setResizable(false);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -152,7 +152,7 @@ public class paymentPage extends JFrame {
 		JLabel lblTotal = new JLabel("TOTAL: RM " +priceformatter.format(totalTicket));
 		lblTotal.setForeground(Color.WHITE);
 		lblTotal.setFont(new Font("Arial", Font.BOLD, 16));
-		lblTotal.setBounds(484, 353, 407, 43);
+		lblTotal.setBounds(484, 353, 311, 43);
 		panelConfirmPayment.add(lblTotal);
 		
 		JButton btnConfirm = new JButton("CONFIRM");
@@ -168,6 +168,19 @@ public class paymentPage extends JFrame {
 		btnConfirm.setFont(new Font("Arial", Font.BOLD, 11));
 		btnConfirm.setBounds(901, 365, 89, 23);
 		panelConfirmPayment.add(btnConfirm);
+		
+		JButton btnBack = new JButton("BACK");
+		btnBack.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				FillInformation a = new FillInformation(name,type,movie,date,time, pricetype);
+				a.show();
+				dispose();
+			}
+		});
+		btnBack.setFont(new Font("Arial", Font.PLAIN, 11));
+		btnBack.setBackground(Color.WHITE);
+		btnBack.setBounds(802, 365, 89, 23);
+		panelConfirmPayment.add(btnBack);
 		
 		JPanel panel = new JPanel();
 		panel.setBorder(new TitledBorder(null, "NOW SHOWING", TitledBorder.LEADING, TitledBorder.TOP, null, new Color(255, 255, 255)));

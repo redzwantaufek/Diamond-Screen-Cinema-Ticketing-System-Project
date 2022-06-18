@@ -221,7 +221,7 @@ public class FillInformation extends JFrame
 		textTotal.setText(null);
 		textTotal.setColumns(10);
 		
-		JButton btnProceed = new JButton("Proceed");
+		JButton btnProceed = new JButton("PROCEED");
 		btnProceed.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				int spinnerAdult1 = (int) spinnerAdult.getValue();
@@ -371,14 +371,14 @@ public class FillInformation extends JFrame
                 	membershipDiscount = "" +priceformatter.format(membership);
                 }
                 
-				paymentPage a = new paymentPage(name,type,movie,date,time,spinnerAdult1,spinnerChildren1,totalTicket,comboBox1,comboBox2,comboBox3,hallNum,seat,membership1,price,price1,price2,typeAdultPrice,typeChildPrice,membershipDiscount,textFnB,textFnB1,textFnB2);
+				paymentPage a = new paymentPage(name,type,movie,date,time,spinnerAdult1,spinnerChildren1,totalTicket,comboBox1,comboBox2,comboBox3,hallNum,seat,membership1,price,price1,price2,typeAdultPrice,typeChildPrice,membershipDiscount,textFnB,textFnB1,textFnB2,pricetype);
 				a.show();
 				dispose();
 			}
 		});
 		btnProceed.setBackground(new Color(255, 255, 255));
 		btnProceed.setFont(new Font("Arial", Font.PLAIN, 11));
-		btnProceed.setBounds(1177, 517, 142, 23);
+		btnProceed.setBounds(1177, 534, 142, 23);
 		contentPane.add(btnProceed);
 		
 		JLabel lblPriceIcon = new JLabel("");
@@ -393,7 +393,7 @@ public class FillInformation extends JFrame
 		contentPane.add(lblHallNum);
 	
 		
-		JButton btnTotal = new JButton("Total:");
+		JButton btnTotal = new JButton("TOTAL:");
         btnTotal.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
             	DecimalFormat priceformatter = new DecimalFormat ("#0.00");
@@ -528,7 +528,7 @@ public class FillInformation extends JFrame
 		textFnB3.setText("0");
 		contentPane.add(textFnB3);
 		
-		JButton btnReset = new JButton("Reset");
+		JButton btnReset = new JButton("RESET");
 		btnReset.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				if (e.getSource() == btnReset)
@@ -552,8 +552,21 @@ public class FillInformation extends JFrame
 		});
 		btnReset.setFont(new Font("Arial", Font.PLAIN, 11));
 		btnReset.setBackground(Color.WHITE);
-		btnReset.setBounds(1177, 476, 142, 23);
+		btnReset.setBounds(1177, 475, 142, 23);
 		contentPane.add(btnReset);
+		
+		JButton btnBack = new JButton("BACK");
+		btnBack.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				WelcomePage a = new WelcomePage(name);
+				a.show();
+				dispose();
+			}
+		});
+		btnBack.setFont(new Font("Arial", Font.PLAIN, 11));
+		btnBack.setBackground(Color.WHITE);
+		btnBack.setBounds(1177, 505, 142, 23);
+		contentPane.add(btnBack);
 	}
 	
 	public void actionPerformed(ActionEvent e) {
