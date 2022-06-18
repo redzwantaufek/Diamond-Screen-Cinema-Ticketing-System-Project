@@ -6,6 +6,8 @@ import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import java.awt.Toolkit;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+
 import java.awt.Font;
 import javax.swing.JPasswordField;
 import javax.swing.JTextField;
@@ -85,9 +87,18 @@ public class loginFrame extends JFrame {
 		btnLogin.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				String name = textName.getText();
+                String password = passwordField.getText();                
+                
+                if (name.equalsIgnoreCase("") || (password.equalsIgnoreCase(""))) 
+                {
+                	JOptionPane.showMessageDialog(null, "PLEASE FILL THE USERNAME AND PASSWORD ", "ERROR", JOptionPane.ERROR_MESSAGE);
+                }
+                else
+                {
 				WelcomePage a = new WelcomePage(name);
 				a.show();
 				dispose();
+                }
 				
 				
 			}

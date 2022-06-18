@@ -361,7 +361,7 @@ public class FillInformation extends JFrame
                 
                 if(seat.equalsIgnoreCase("") || ((String)comboBoxHallNum.getSelectedItem()).equals("") || (!rdbtnMembership.isSelected()) || (spinnerAdult1 == 0) || (spinnerChildren1 == 0)) 
                 {
-                	JOptionPane.showMessageDialog(null, "PLEASE SELECT ALL THE OPTION", "ERROR", JOptionPane.ERROR_MESSAGE);
+                	JOptionPane.showMessageDialog(null, "PLEASE SELECT THE OPTION", "ERROR", JOptionPane.ERROR_MESSAGE);
                 }
                 else 
                 {
