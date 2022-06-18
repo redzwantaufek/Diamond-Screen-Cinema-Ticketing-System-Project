@@ -244,6 +244,11 @@ public class RecieptPage extends JFrame {
 		lblTotalAns.setBounds(181, 299, 148, 23);
 		panelPrice2.add(lblTotalAns);
 		
+		JLabel lblMembershipPriceAnsMinus = new JLabel("-");
+		lblMembershipPriceAnsMinus.setFont(new Font("Arial", Font.BOLD, 15));
+		lblMembershipPriceAnsMinus.setBounds(160, 207, 11, 23);
+		panelPrice2.add(lblMembershipPriceAnsMinus);
+		
 		JLabel lblTimePurchase = new JLabel("TIME PURCHASE:");
 		lblTimePurchase.setFont(new Font("Arial", Font.BOLD, 15));
 		lblTimePurchase.setBounds(10, 335, 129, 23);

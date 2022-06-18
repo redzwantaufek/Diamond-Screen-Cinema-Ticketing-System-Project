@@ -39,6 +39,7 @@ public class FillInformation extends JFrame
 	private JTextField textFnB3;
 	private final ButtonGroup buttonGroup = new ButtonGroup();
 	private double membership = 0.0;
+	private double membershipValue = 0.0;
 
 	/**
 	 * Launch the application.
@@ -162,11 +163,11 @@ public class FillInformation extends JFrame
 			public void actionPerformed(ActionEvent e) {
 				if (e.getSource() == rdbtnMembership)
 				{
-					membership = 0.05;
+					membershipValue = 0.05;
 				}
 				else
 				{
-					membership = 0.00;
+					membershipValue = 0.00;
 				}
 			}
 		});
@@ -240,18 +241,6 @@ public class FillInformation extends JFrame
                 String membership1 = (rdbtnMembership).toString();
                 String membershipDiscount = (rdbtnMembership).toString();
                 
-                //RadioButtonMembership
-                if (rdbtnMembership.isSelected() == true)
-                {
-                	membership1 = "Yes";
-                	membershipDiscount = "5% Off";
-                }
-                else if (rdbtnMembership.isSelected() == false)
-                {
-                	membership1 = "No";
-                	membershipDiscount = "0% Off";
-                }
-                
                 //ComboBoxHallNum
                 if (((String)comboBoxHallNum.getSelectedItem()).equals("Hall 1"))
                 {
@@ -292,7 +281,7 @@ public class FillInformation extends JFrame
                 else if (((String) comboBoxFnB1.getSelectedItem()).equals("2. Popcorn"))
                 {
                 	comboBox1 = "Popcorn";
-                    price = 7.50 * textFnB;
+                    price = 8.00 * textFnB;
                 }
                 else if (((String) comboBoxFnB1.getSelectedItem()).equals("3. Soda Drink"))
                 {
@@ -302,7 +291,7 @@ public class FillInformation extends JFrame
                 else if (((String) comboBoxFnB1.getSelectedItem()).equals("4. Hot Dog"))
                 {
                 	comboBox1 = "Hot Dog";
-                    price = 6.50 * textFnB;
+                    price = 6.00 * textFnB;
                 }
 
                 //ComboBox2
@@ -315,7 +304,7 @@ public class FillInformation extends JFrame
                 else if (((String) comboBoxFnB2.getSelectedItem()).equals("2. Popcorn"))
                 {
                 	comboBox2 = "Popcorn";
-                    price1 = 7.50 * textFnB1;
+                    price1 = 8.00 * textFnB1;
                 }
                 else if (((String) comboBoxFnB2.getSelectedItem()).equals("3. Soda Drink"))
                 {
@@ -325,7 +314,7 @@ public class FillInformation extends JFrame
                 else if (((String) comboBoxFnB2.getSelectedItem()).equals("4. Hot Dog"))
                 {
                 	comboBox2 = "Hot Dog";
-                    price1 = 6.50 * textFnB1;
+                    price1 = 6.00 * textFnB1;
                 }
 
                 //ComboBox3
@@ -338,7 +327,7 @@ public class FillInformation extends JFrame
                 else if (((String) comboBoxFnB3.getSelectedItem()).equals("2. Popcorn"))
                 {
                 	comboBox3 = "Popcorn";
-                    price2 = 7.50 * textFnB2;
+                    price2 = 8.00 * textFnB2;
                 }
                 else if (((String) comboBoxFnB3.getSelectedItem()).equals("3. Soda Drink"))
                 {
@@ -348,10 +337,25 @@ public class FillInformation extends JFrame
                 else if (((String) comboBoxFnB3.getSelectedItem()).equals("4. Hot Dog"))
                 {
                 	comboBox3 = "Hot Dog";
-                    price2 = 6.50 * textFnB2;
+                    price2 = 6.00 * textFnB2;
                 }
                 
-                double totalTicket = (spinnerAdult1 * priceAdult) + (spinnerAdult1 * pricetype) + (spinnerChildren1 * priceChildren) +(spinnerChildren1 * pricetype) + (price) + (price1) + (price2) - (membership);
+                double totalAmount = (spinnerAdult1 * priceAdult) + (spinnerAdult1 * pricetype) + (spinnerChildren1 * priceChildren) +(spinnerChildren1 * pricetype) + (price) + (price1) + (price2);
+                double membership = (totalAmount) * (membershipValue);
+                double totalTicket = (totalAmount) - (membership);
+                
+                //RadioButtonMembership
+                if (rdbtnMembership.isSelected() == true)
+                {
+                	membership1 = "Yes";
+                	membershipDiscount = "" +membership;
+                }
+                else if (rdbtnMembership.isSelected() == false)
+                {
+                	membership1 = "No";
+                	membershipDiscount = "" +membership;
+                }
+                
 				paymentPage a = new paymentPage(name, type,movie,date,time,spinnerAdult1,spinnerChildren1,totalTicket,comboBox1,comboBox2,comboBox3,hallNum,seat,membership1,price,price1,price2,priceAdult,priceChildren,membershipDiscount);
 				a.show();
 				dispose();
@@ -402,7 +406,7 @@ public class FillInformation extends JFrame
                 else if (((String) comboBoxFnB1.getSelectedItem()).equals("2. Popcorn"))
                 {
                 	comboBox1 = "Popcorn";
-                    price = 7.50 * textFnB;
+                    price = 8.00 * textFnB;
                 }
                 else if (((String) comboBoxFnB1.getSelectedItem()).equals("3. Soda Drink"))
                 {
@@ -412,7 +416,7 @@ public class FillInformation extends JFrame
                 else if (((String) comboBoxFnB1.getSelectedItem()).equals("4. Hot Dog"))
                 {
                 	comboBox1 = "Hot Dog";
-                    price = 6.50 * textFnB;
+                    price = 6.00 * textFnB;
                 }
 
                 //ComboBox2
@@ -425,7 +429,7 @@ public class FillInformation extends JFrame
                 else if (((String) comboBoxFnB2.getSelectedItem()).equals("2. Popcorn"))
                 {
                 	comboBox2 = "Popcorn";
-                    price1 = 7.50 * textFnB1;
+                    price1 = 8.00 * textFnB1;
                 }
                 else if (((String) comboBoxFnB2.getSelectedItem()).equals("3. Soda Drink"))
                 {
@@ -435,7 +439,7 @@ public class FillInformation extends JFrame
                 else if (((String) comboBoxFnB2.getSelectedItem()).equals("4. Hot Dog"))
                 {
                 	comboBox2 = "Hot Dog";
-                    price1 = 6.50 * textFnB1;
+                    price1 = 6.00 * textFnB1;
                 }
 
                 //ComboBox3
@@ -448,7 +452,7 @@ public class FillInformation extends JFrame
                 else if (((String) comboBoxFnB3.getSelectedItem()).equals("2. Popcorn"))
                 {
                 	comboBox3 = "Popcorn";
-                    price2 = 7.50 * textFnB2;
+                    price2 = 8.00 * textFnB2;
                 }
                 else if (((String) comboBoxFnB3.getSelectedItem()).equals("3. Soda Drink"))
                 {
@@ -458,11 +462,12 @@ public class FillInformation extends JFrame
                 else if (((String) comboBoxFnB3.getSelectedItem()).equals("4. Hot Dog"))
                 {
                 	comboBox3 = "Hot Dog";
-                    price2 = 6.50 * textFnB2;
+                    price2 = 6.00 * textFnB2;
                 }
                 
-                
-                double totalTicket = (spinnerAdult1 * priceAdult) + (spinnerAdult1 * pricetype) + (spinnerChildren1 * priceChildren) +(spinnerChildren1 * pricetype) + (price) + (price1) + (price2) - (membership);
+                double totalAmount = (spinnerAdult1 * priceAdult) + (spinnerAdult1 * pricetype) + (spinnerChildren1 * priceChildren) +(spinnerChildren1 * pricetype) + (price) + (price1) + (price2);
+                double membership = (totalAmount) * (membershipValue);
+                double totalTicket = (totalAmount) - (membership);
                 textTotal.setText("" +priceformatter.format(totalTicket));
             }
         });
