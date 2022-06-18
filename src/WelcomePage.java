@@ -48,7 +48,6 @@ public class WelcomePage extends JFrame {
 			}
 		});
 	}
-
 	/**
 	 * Create the frame.
 	 */
