@@ -58,6 +58,7 @@ public class FillInformation extends JFrame
 	/**
 	 * Create the frame.
 	 */
+	 //
 	public FillInformation(String name, String type, String movie, String date, String time,double pricetype) {
 		setTitle("DIAMOND SCREEN CINEMA(DSC)");
 		setResizable(false);
