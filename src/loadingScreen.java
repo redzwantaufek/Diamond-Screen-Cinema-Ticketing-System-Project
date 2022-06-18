@@ -15,6 +15,7 @@ public class loadingScreen {
         addProgressBar();
         addMessage();
         runningPBar();
+        //
     }
     public void createGUI(){
         frame=new JFrame();
