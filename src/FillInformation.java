@@ -55,7 +55,6 @@ public class FillInformation extends JFrame
 			}
 		});
 	}
-
 	/**
 	 * Create the frame.
 	 */
@@ -217,6 +216,7 @@ public class FillInformation extends JFrame
 		textTotal.setBackground(new Color(255, 255, 255));
 		textTotal.setBounds(965, 518, 160, 20);
 		contentPane.add(textTotal);
+		textTotal.setText(null);
 		textTotal.setColumns(10);
 		
 		JButton btnProceed = new JButton("Proceed");
@@ -225,20 +225,26 @@ public class FillInformation extends JFrame
 				int spinnerAdult1 = (int) spinnerAdult.getValue();
                 int  spinnerChildren1 = (int) spinnerChildren.getValue();
                 double price = 0.0;
+                double price1 = 0.0;
+                double price2 = 0.0;
                 double textFnB = Double.parseDouble(textFnB1.getText());
                 double textFnB1 = Double.parseDouble(textFnB2.getText());
                 double textFnB2 = Double.parseDouble(textFnB3.getText());
-                double discount = 0.0;
+                int priceAdult = 5;
+                int priceChildren = 3;
                 String seat = textSeat.getText();
                 
                 String membership1 = (rdbtnMembership).toString();
+                String membershipDiscount = (rdbtnMembership).toString();
                 if (rdbtnMembership.isSelected() == true)
                 {
                 	membership1 = "Yes";
+                	membershipDiscount = "5% Off";
                 }
                 else if (rdbtnMembership.isSelected() == false)
                 {
                 	membership1 = "No";
+                	membershipDiscount = "0% Off";
                 }
                 
                 String hallNum = (String)comboBoxHallNum.getSelectedItem();
@@ -300,51 +306,51 @@ public class FillInformation extends JFrame
                 if (((String) comboBoxFnB2.getSelectedItem()).equals("1. Nasi Kerabu"))
                 {
                 	comboBox2 ="Nasi Kerabu";
-                    price = 10.0;
+                    price1 = 10.0;
                     
                 }
                 else if (((String) comboBoxFnB2.getSelectedItem()).equals("2. Popcorn"))
                 {
                 	comboBox2 ="Popcorn";
-                    price = 7.50;
+                    price1 = 7.50;
                 }
                 else if (((String) comboBoxFnB2.getSelectedItem()).equals("3. Soda Drink"))
                 {
                 	comboBox2 ="Soda Drink";
-                	price = 4.0;
+                	price1 = 4.0;
                 }
                 else if (((String) comboBoxFnB2.getSelectedItem()).equals("4. Hot Dog"))
                 {
                 	comboBox2 ="Hot Dog";
-                    price = 6.50;
+                    price1 = 6.50;
                 }
 
                 //ComboBox3
                 String comboBox3 = (String)comboBoxFnB3.getSelectedItem();
-                if (((String) comboBoxFnB1.getSelectedItem()).equals("1. Nasi Kerabu"))
+                if (((String) comboBoxFnB3.getSelectedItem()).equals("1. Nasi Kerabu"))
                 {
                 	comboBox3 ="Nasi Kerabu";
-                    price = 10.0;
+                    price2 = 10.0;
                     
                 }
                 else if (((String) comboBoxFnB3.getSelectedItem()).equals("2. Popcorn"))
                 {
                 	comboBox3 ="Popcorn";
-                    price = 7.50;
+                    price2 = 7.50;
                 }
                 else if (((String) comboBoxFnB3.getSelectedItem()).equals("3. Soda Drink"))
                 {
                 	comboBox3 ="Soda Drink";
-                	price = 4.0;
+                	price2 = 4.0;
                 }
                 else if (((String) comboBoxFnB3.getSelectedItem()).equals("4. Hot Dog"))
                 {
                 	comboBox3 ="Hot Dog";
-                    price = 6.50;
+                    price2 = 6.50;
                 }
                 
-                double totalTicket = (spinnerAdult1 * 5) + (spinnerAdult1 * pricetype) + (spinnerChildren1 * 3) +(spinnerChildren1 * pricetype) + (price * textFnB) + (price * textFnB1) + (price * textFnB2) - (membership);
-				paymentPage a = new paymentPage(name, type,movie,date,time,spinnerAdult1,spinnerChildren1,totalTicket,comboBox1,comboBox2,comboBox3,hallNum,seat,membership1);
+                double totalTicket = (spinnerAdult1 * priceAdult) + (spinnerAdult1 * pricetype) + (spinnerChildren1 * priceChildren) +(spinnerChildren1 * pricetype) + (price * textFnB) + (price1 * textFnB1) + (price2 * textFnB2) - (membership);
+				paymentPage a = new paymentPage(name, type,movie,date,time,spinnerAdult1,spinnerChildren1,totalTicket,comboBox1,comboBox2,comboBox3,hallNum,seat,membership1,price,price1,price2,priceAdult,priceChildren,membershipDiscount);
 				a.show();
 				dispose();
 			}
@@ -372,7 +378,11 @@ public class FillInformation extends JFrame
             	DecimalFormat priceformatter = new DecimalFormat ("#0.00");
                 int spinnerAdult1 = (int) spinnerAdult.getValue();
                 int spinnerChildren1 = (int) spinnerChildren.getValue();
+                int priceAdult = 5;
+                int priceChildren = 3;
                 double price = 0.0;
+                double price1 = 0.0;
+                double price2 = 0.0;
                 double textFnB = Double.parseDouble(textFnB1.getText());
                 double textFnB1 = Double.parseDouble(textFnB2.getText());
                 double textFnB2 = Double.parseDouble(textFnB3.getText());
@@ -413,23 +423,23 @@ public class FillInformation extends JFrame
                 if (((String) comboBoxFnB2.getSelectedItem()).equals("1. Nasi Kerabu"))
                 {
                 	comboBox2 ="Nasi Kerabu";
-                    price = 10.0;
+                    price1 = 10.0;
                     
                 }
                 else if (((String) comboBoxFnB2.getSelectedItem()).equals("2. Popcorn"))
                 {
                 	comboBox2 ="Popcorn";
-                    price = 7.50;
+                    price1 = 7.50;
                 }
                 else if (((String) comboBoxFnB2.getSelectedItem()).equals("3. Soda Drink"))
                 {
                 	comboBox2 ="Soda Drink";
-                	price = 4.0;
+                	price1 = 4.0;
                 }
                 else if (((String) comboBoxFnB2.getSelectedItem()).equals("4. Hot Dog"))
                 {
                 	comboBox2 ="Hot Dog";
-                    price = 6.50;
+                    price1 = 6.50;
                 }
 
                 //ComboBox3
@@ -437,26 +447,26 @@ public class FillInformation extends JFrame
                 if (((String) comboBoxFnB3.getSelectedItem()).equals("1. Nasi Kerabu"))
                 {
                 	comboBox3 ="Nasi Kerabu";
-                    price = 10.0;
+                    price2 = 10.0;
                     
                 }
                 else if (((String) comboBoxFnB3.getSelectedItem()).equals("2. Popcorn"))
                 {
                 	comboBox3 ="Popcorn";
-                    price = 7.50;
+                    price2 = 7.50;
                 }
                 else if (((String) comboBoxFnB3.getSelectedItem()).equals("3. Soda Drink"))
                 {
                 	comboBox3 ="Soda Drink";
-                	price = 4.0;
+                	price2 = 4.0;
                 }
                 else if (((String) comboBoxFnB3.getSelectedItem()).equals("4. Hot Dog"))
                 {
                 	comboBox3 ="Hot Dog";
-                    price = 6.50;
+                    price2 = 6.50;
                 }
                 
-                double totalTicket = (spinnerAdult1 * 5) + (spinnerAdult1 * pricetype) + (spinnerChildren1 * 3) +(spinnerChildren1 * pricetype) + (price * textFnB) + (price * textFnB1) + (price * textFnB2) - (membership);
+                double totalTicket = (spinnerAdult1 * priceAdult) + (spinnerAdult1 * pricetype) + (spinnerChildren1 * priceChildren) +(spinnerChildren1 * pricetype) + (price * textFnB) + (price1 * textFnB1) + (price2 * textFnB2) - (membership);
                 textTotal.setText("" +priceformatter.format(totalTicket));
             }
         });
