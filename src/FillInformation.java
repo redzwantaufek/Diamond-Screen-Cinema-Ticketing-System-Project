@@ -40,6 +40,7 @@ public class FillInformation extends JFrame
 	private final ButtonGroup buttonGroup = new ButtonGroup();
 	private double membership = 0.0;
 	private double membershipValue = 0.0;
+	DecimalFormat priceformatter = new DecimalFormat ("#0.00");
 
 	/**
 	 * Launch the application.
@@ -348,12 +349,12 @@ public class FillInformation extends JFrame
                 if (rdbtnMembership.isSelected() == true)
                 {
                 	membership1 = "Yes";
-                	membershipDiscount = "" +membership;
+                	membershipDiscount = "" +priceformatter.format(membership);
                 }
                 else if (rdbtnMembership.isSelected() == false)
                 {
                 	membership1 = "No";
-                	membershipDiscount = "" +membership;
+                	membershipDiscount = "" +priceformatter.format(membership);
                 }
                 
 				paymentPage a = new paymentPage(name, type,movie,date,time,spinnerAdult1,spinnerChildren1,totalTicket,comboBox1,comboBox2,comboBox3,hallNum,seat,membership1,price,price1,price2,priceAdult,priceChildren,membershipDiscount);
