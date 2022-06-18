@@ -42,7 +42,7 @@ public class paymentPage extends JFrame {
 	 * Create the frame.
 	 */
 	//
-	public paymentPage(String name,String type, String movie, String date, String time, int spinnerAdult1,int spinnerChildren1,double totalTicket, String comboBox1, String comboBox2, String comboBox3,String hallNum,String seat,String membership1,double price,double price1,double price2,int priceAdult, int priceChildren, String membershipDiscount,double textFnB,double textFnB1,double textFnB2) {
+	public paymentPage(String name,String type, String movie, String date, String time, int spinnerAdult1,int spinnerChildren1,double totalTicket, String comboBox1, String comboBox2, String comboBox3,String hallNum,String seat,String membership1,double price,double price1,double price2,double typeAdultPrice,double typeChildPrice, String membershipDiscount,double textFnB,double textFnB1,double textFnB2) {
 		setTitle("DIAMOND SCREEN CINEMA (DSC)");
 		setResizable(false);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -159,7 +159,7 @@ public class paymentPage extends JFrame {
 		btnConfirm.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				
-				RecieptPage a = new RecieptPage(name,type,movie,date,time,spinnerAdult1,spinnerChildren1,totalTicket,comboBox1,comboBox2,comboBox3,hallNum,seat,membership1,price,price1,price2,priceAdult,priceChildren,membershipDiscount,textFnB,textFnB1,textFnB2);
+				RecieptPage a = new RecieptPage(name,type,movie,date,time,spinnerAdult1,spinnerChildren1,totalTicket,comboBox1,comboBox2,comboBox3,hallNum,seat,membership1,price,price1,price2,typeAdultPrice,typeChildPrice,membershipDiscount,textFnB,textFnB1,textFnB2);
 				a.show();
 				dispose();
 			}

@@ -17,6 +17,7 @@ import javax.swing.border.EtchedBorder;
 import java.awt.Font;
 import javax.swing.JSeparator;
 import javax.swing.border.LineBorder;
+import javax.swing.JTextArea;
 
 public class RecieptPage extends JFrame {
 
@@ -42,7 +43,7 @@ public class RecieptPage extends JFrame {
 	 * Create the frame.
 	 */
 	//
-	public RecieptPage(String name,String type, String movie, String date, String time, int spinnerAdult1,int spinnerChildren1,double totalTicket, String comboBox1, String comboBox2, String comboBox3,String hallNum,String seat,String membership1, double price,double price1,double price2,int priceAdult, int priceChildren, String membershipDiscount,double textFnB,double textFnB1,double textFnB2) {
+	public RecieptPage(String name,String type, String movie, String date, String time, int spinnerAdult1,int spinnerChildren1,double totalTicket, String comboBox1, String comboBox2, String comboBox3,String hallNum,String seat,String membership1, double price,double price1,double price2,double typeAdultPrice,double typeChildPrice, String membershipDiscount,double textFnB,double textFnB1,double textFnB2) {
 		setTitle("DIAMOND SCREEN CINEMA (DSC)");
 		setResizable(false);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -183,12 +184,12 @@ public class RecieptPage extends JFrame {
 		separator_1_1.setBounds(148, 1, 11, 333);
 		panelPrice2.add(separator_1_1);
 		
-		JLabel lblAdultans = new JLabel(""+spinnerAdult1);
+		JLabel lblAdultans = new JLabel("x "+spinnerAdult1);
 		lblAdultans.setFont(new Font("Arial", Font.BOLD, 15));
 		lblAdultans.setBounds(10, 1, 141, 23);
 		panelPrice2.add(lblAdultans);
 		
-		JLabel lblChildrenAns = new JLabel(""+spinnerChildren1);
+		JLabel lblChildrenAns = new JLabel("x "+spinnerChildren1);
 		lblChildrenAns.setFont(new Font("Arial", Font.BOLD, 15));
 		lblChildrenAns.setBounds(9, 41, 140, 23);
 		panelPrice2.add(lblChildrenAns);
@@ -213,12 +214,12 @@ public class RecieptPage extends JFrame {
 		lblMemAns.setBounds(10, 207, 141, 23);
 		panelPrice2.add(lblMemAns);
 		
-		JLabel lblAdultPriceAns = new JLabel("RM" +priceformatter.format(priceAdult));
+		JLabel lblAdultPriceAns = new JLabel("RM" +priceformatter.format(typeAdultPrice));
 		lblAdultPriceAns.setFont(new Font("Arial", Font.BOLD, 15));
 		lblAdultPriceAns.setBounds(181, 1, 148, 23);
 		panelPrice2.add(lblAdultPriceAns);
 		
-		JLabel lblChildPriceAns = new JLabel("RM"+priceformatter.format(priceChildren));
+		JLabel lblChildPriceAns = new JLabel("RM"+priceformatter.format(typeChildPrice));
 		lblChildPriceAns.setFont(new Font("Arial", Font.BOLD, 15));
 		lblChildPriceAns.setBounds(181, 41, 148, 23);
 		panelPrice2.add(lblChildPriceAns);
@@ -243,15 +244,16 @@ public class RecieptPage extends JFrame {
 		lblMembershipPriceAns.setBounds(181, 207, 168, 23);
 		panelPrice2.add(lblMembershipPriceAns);
 		
-		JLabel lblTotalAns = new JLabel("RM" +priceformatter.format(totalTicket));
-		lblTotalAns.setFont(new Font("Arial", Font.BOLD, 15));
-		lblTotalAns.setBounds(181, 299, 148, 23);
-		panelPrice2.add(lblTotalAns);
-		
 		JLabel lblMembershipPriceAnsMinus = new JLabel("-");
 		lblMembershipPriceAnsMinus.setFont(new Font("Arial", Font.BOLD, 15));
 		lblMembershipPriceAnsMinus.setBounds(160, 207, 11, 23);
 		panelPrice2.add(lblMembershipPriceAnsMinus);
+		
+		JTextArea textAreaTotal = new JTextArea("RM" +priceformatter.format(totalTicket));
+		textAreaTotal.setEditable(false);
+		textAreaTotal.setFont(new Font("Arial", Font.BOLD, 15));
+		textAreaTotal.setBounds(181, 293, 141, 23);
+		panelPrice2.add(textAreaTotal);
 		
 		JLabel lblTimePurchase = new JLabel("TIME PURCHASE:");
 		lblTimePurchase.setFont(new Font("Arial", Font.BOLD, 15));

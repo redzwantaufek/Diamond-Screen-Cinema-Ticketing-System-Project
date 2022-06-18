@@ -353,7 +353,9 @@ public class FillInformation extends JFrame
                 	comboBox3 = "---";
                 }
                 
-                double totalAmount = (spinnerAdult1 * priceAdult) + (spinnerAdult1 * pricetype) + (spinnerChildren1 * priceChildren) +(spinnerChildren1 * pricetype) + (price) + (price1) + (price2);
+                double typeAdultPrice = (spinnerAdult1 * priceAdult) + (spinnerAdult1 * pricetype);
+                double typeChildPrice = (spinnerChildren1 * priceChildren) +(spinnerChildren1 * pricetype);
+                double totalAmount = typeAdultPrice + typeChildPrice + (price) + (price1) + (price2);
                 double membership = (totalAmount) * (membershipValue);
                 double totalTicket = (totalAmount) - (membership);
                 
@@ -369,7 +371,7 @@ public class FillInformation extends JFrame
                 	membershipDiscount = "" +priceformatter.format(membership);
                 }
                 
-				paymentPage a = new paymentPage(name,type,movie,date,time,spinnerAdult1,spinnerChildren1,totalTicket,comboBox1,comboBox2,comboBox3,hallNum,seat,membership1,price,price1,price2,priceAdult,priceChildren,membershipDiscount,textFnB,textFnB1,textFnB2);
+				paymentPage a = new paymentPage(name,type,movie,date,time,spinnerAdult1,spinnerChildren1,totalTicket,comboBox1,comboBox2,comboBox3,hallNum,seat,membership1,price,price1,price2,typeAdultPrice,typeChildPrice,membershipDiscount,textFnB,textFnB1,textFnB2);
 				a.show();
 				dispose();
 			}
@@ -489,8 +491,9 @@ public class FillInformation extends JFrame
                 {
                 	comboBox3 = "---";
                 }
-                
-                double totalAmount = (spinnerAdult1 * priceAdult) + (spinnerAdult1 * pricetype) + (spinnerChildren1 * priceChildren) +(spinnerChildren1 * pricetype) + (price) + (price1) + (price2);
+                double typeAdultPrice = (spinnerAdult1 * priceAdult) + (spinnerAdult1 * pricetype);
+                double typeChildPrice = (spinnerChildren1 * priceChildren) +(spinnerChildren1 * pricetype);
+                double totalAmount = typeAdultPrice + typeChildPrice + (price) + (price1) + (price2);
                 double membership = (totalAmount) * (membershipValue);
                 double totalTicket = (totalAmount) - (membership);
                 textTotal.setText("" +priceformatter.format(totalTicket));
