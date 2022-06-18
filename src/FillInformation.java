@@ -380,8 +380,8 @@ public class FillInformation extends JFrame
             	DecimalFormat priceformatter = new DecimalFormat ("#0.00");
                 int spinnerAdult1 = (int) spinnerAdult.getValue();
                 int spinnerChildren1 = (int) spinnerChildren.getValue();
-                int priceAdult = 0;
-                int priceChildren = 0;
+                int priceAdult = 5;
+                int priceChildren = 3;
                 double price = 0.0;
                 double price1 = 0.0;
                 double price2 = 0.0;
