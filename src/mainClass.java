@@ -3,5 +3,6 @@ public class mainClass {
         new loadingScreen();//Creating object of SplashScreenDemo class
         loginFrame a = new loginFrame();
         a.show();
+        //
     }
 }
