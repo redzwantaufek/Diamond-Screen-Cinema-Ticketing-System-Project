@@ -34,21 +34,6 @@ public class WelcomePage extends JFrame {
 	private JPanel contentPane;
 
 	/**
-	 * Launch the application.
-	 */
-	/*public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					WelcomePage frame = new WelcomePage();
-					frame.setVisible(true);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		});
-	}
-	/**
 	 * Create the frame.
 	 */
 	//
@@ -319,13 +304,17 @@ public class WelcomePage extends JFrame {
 				{
 					time =  "12:10";
 				}
-				
-				FillInformation a = new FillInformation(name,type,movie,date,time,pricetype);
-				a.show();
-				dispose();
-				
-				
-				
+                
+				if(((String)comboBoxTime.getSelectedItem()).equals("") || ((String)comboBoxDate.getSelectedItem()).equals("") || ((String)comboBoxMovie.getSelectedItem()).equals("") || ((String)comboBoxCinemaType.getSelectedItem()).equals("") )
+				{
+                    JOptionPane.showMessageDialog(null, "PLEASE SELECT ALL THE OPTION", "ERROR", JOptionPane.ERROR_MESSAGE);
+                }
+                else 
+                {
+                	FillInformation a = new FillInformation(name,type,movie,date,time,pricetype);
+    				a.show();
+    				dispose();
+                }
 			}
 		});
 		btnNext.setBounds(215, 335, 177, 23);

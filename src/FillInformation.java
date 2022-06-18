@@ -27,6 +27,7 @@ import java.awt.event.ActionListener;
 import java.text.DecimalFormat;
 import java.awt.event.ActionEvent;
 import javax.swing.ButtonGroup;
+import javax.swing.SpinnerNumberModel;
 
 public class FillInformation extends JFrame 
 {
@@ -42,21 +43,6 @@ public class FillInformation extends JFrame
 	private double membershipValue = 0.0;
 	DecimalFormat priceformatter = new DecimalFormat ("#0.00");
 
-	/**
-	 * Launch the application.
-	 */
-	/*public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					FillInformation frame = new FillInformation();
-					frame.setVisible(true);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		});
-	}
 	/**
 	 * Create the frame.
 	 */
@@ -148,12 +134,14 @@ public class FillInformation extends JFrame
 		textSeat.setColumns(10);
 		
 		JSpinner spinnerAdult = new JSpinner();
+		spinnerAdult.setModel(new SpinnerNumberModel(new Integer(0), new Integer(0), null, new Integer(1)));
 		spinnerAdult.setBackground(new Color(255, 255, 255));
 		spinnerAdult.setFont(new Font("Arial", Font.PLAIN, 11));
 		spinnerAdult.setBounds(1177, 141, 142, 20);
 		contentPane.add(spinnerAdult);
 		
 		JSpinner spinnerChildren = new JSpinner();
+		spinnerChildren.setModel(new SpinnerNumberModel(new Integer(0), new Integer(0), null, new Integer(1)));
 		spinnerChildren.setBackground(new Color(255, 255, 255));
 		spinnerChildren.setFont(new Font("Arial", Font.PLAIN, 11));
 		spinnerChildren.setBounds(1177, 176, 142, 20);
@@ -371,9 +359,16 @@ public class FillInformation extends JFrame
                 	membershipDiscount = "" +priceformatter.format(membership);
                 }
                 
-				paymentPage a = new paymentPage(name,type,movie,date,time,spinnerAdult1,spinnerChildren1,totalTicket,comboBox1,comboBox2,comboBox3,hallNum,seat,membership1,price,price1,price2,typeAdultPrice,typeChildPrice,membershipDiscount,textFnB,textFnB1,textFnB2,pricetype);
-				a.show();
-				dispose();
+                if(seat.equalsIgnoreCase("") || ((String)comboBoxHallNum.getSelectedItem()).equals("") || (!rdbtnMembership.isSelected()) || (spinnerAdult1 == 0) || (spinnerChildren1 == 0)) 
+                {
+                	JOptionPane.showMessageDialog(null, "PLEASE SELECT ALL THE OPTION", "ERROR", JOptionPane.ERROR_MESSAGE);
+                }
+                else 
+                {
+                	paymentPage a = new paymentPage(name,type,movie,date,time,spinnerAdult1,spinnerChildren1,totalTicket,comboBox1,comboBox2,comboBox3,hallNum,seat,membership1,price,price1,price2,typeAdultPrice,typeChildPrice,membershipDiscount,textFnB,textFnB1,textFnB2,pricetype);
+    				a.show();
+    				dispose();
+                }
 			}
 		});
 		btnProceed.setBackground(new Color(255, 255, 255));
