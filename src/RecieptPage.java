@@ -42,7 +42,7 @@ public class RecieptPage extends JFrame {
 	 * Create the frame.
 	 */
 	//
-	public RecieptPage(String name,String type, String movie, String date, String time, int spinnerAdult1,int spinnerChildren1,double totalTicket, String comboBox1, String comboBox2, String comboBox3,String hallNum,String seat,String membership1, double price,double price1,double price2,int priceAdult, int priceChildren, String membershipDiscount) {
+	public RecieptPage(String name,String type, String movie, String date, String time, int spinnerAdult1,int spinnerChildren1,double totalTicket, String comboBox1, String comboBox2, String comboBox3,String hallNum,String seat,String membership1, double price,double price1,double price2,int priceAdult, int priceChildren, String membershipDiscount,double textFnB,double textFnB1,double textFnB2) {
 		setTitle("DIAMOND SCREEN CINEMA (DSC)");
 		setResizable(false);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -52,6 +52,10 @@ public class RecieptPage extends JFrame {
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
+		
+		int textFnbInt =(int)textFnB;
+		int textFnbInt1 =(int)textFnB1;
+		int textFnbInt2 =(int)textFnB2;
 		
 		JLabel lblBanner = new JLabel("");
 		lblBanner.setIcon(new ImageIcon("C:\\Users\\taufe\\Documents\\Lecture\\Semester 2\\Object Oriented Programming(SWC2333)\\Kerja\\Assignment group\\Gambo\\Black Yellow Simple Business Thank You Postcard (1348 \u00D7 143 mm).png"));
@@ -189,17 +193,17 @@ public class RecieptPage extends JFrame {
 		lblChildrenAns.setBounds(9, 41, 140, 23);
 		panelPrice2.add(lblChildrenAns);
 		
-		JLabel lblFnB1Ans = new JLabel(comboBox1);
+		JLabel lblFnB1Ans = new JLabel(comboBox1 +" x " +textFnbInt);
 		lblFnB1Ans.setFont(new Font("Arial", Font.BOLD, 15));
 		lblFnB1Ans.setBounds(10, 80, 141, 23);
 		panelPrice2.add(lblFnB1Ans);
 		
-		JLabel lblFnB2Ans = new JLabel(comboBox2);
+		JLabel lblFnB2Ans = new JLabel(comboBox2 +" x " +textFnbInt1);
 		lblFnB2Ans.setFont(new Font("Arial", Font.BOLD, 15));
 		lblFnB2Ans.setBounds(10, 122, 141, 23);
 		panelPrice2.add(lblFnB2Ans);
 		
-		JLabel lblFnB3Ans = new JLabel(comboBox3);
+		JLabel lblFnB3Ans = new JLabel(comboBox3 +" x " +textFnbInt2);
 		lblFnB3Ans.setFont(new Font("Arial", Font.BOLD, 15));
 		lblFnB3Ans.setBounds(10, 160, 141, 23);
 		panelPrice2.add(lblFnB3Ans);

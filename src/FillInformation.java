@@ -294,6 +294,10 @@ public class FillInformation extends JFrame
                 	comboBox1 = "Hot Dog";
                     price = 6.00 * textFnB;
                 }
+                else if (((String) comboBoxFnB1.getSelectedItem()).equals(""))
+                {
+                	comboBox1 = "---";
+                }
 
                 //ComboBox2
                 if (((String) comboBoxFnB2.getSelectedItem()).equals("1. Nasi Kerabu"))
@@ -316,6 +320,10 @@ public class FillInformation extends JFrame
                 {
                 	comboBox2 = "Hot Dog";
                     price1 = 6.00 * textFnB1;
+                }
+                else if (((String) comboBoxFnB2.getSelectedItem()).equals(""))
+                {
+                	comboBox2 = "---";
                 }
 
                 //ComboBox3
@@ -340,6 +348,10 @@ public class FillInformation extends JFrame
                 	comboBox3 = "Hot Dog";
                     price2 = 6.00 * textFnB2;
                 }
+                else if (((String) comboBoxFnB3.getSelectedItem()).equals(""))
+                {
+                	comboBox3 = "---";
+                }
                 
                 double totalAmount = (spinnerAdult1 * priceAdult) + (spinnerAdult1 * pricetype) + (spinnerChildren1 * priceChildren) +(spinnerChildren1 * pricetype) + (price) + (price1) + (price2);
                 double membership = (totalAmount) * (membershipValue);
@@ -357,7 +369,7 @@ public class FillInformation extends JFrame
                 	membershipDiscount = "" +priceformatter.format(membership);
                 }
                 
-				paymentPage a = new paymentPage(name, type,movie,date,time,spinnerAdult1,spinnerChildren1,totalTicket,comboBox1,comboBox2,comboBox3,hallNum,seat,membership1,price,price1,price2,priceAdult,priceChildren,membershipDiscount);
+				paymentPage a = new paymentPage(name,type,movie,date,time,spinnerAdult1,spinnerChildren1,totalTicket,comboBox1,comboBox2,comboBox3,hallNum,seat,membership1,price,price1,price2,priceAdult,priceChildren,membershipDiscount,textFnB,textFnB1,textFnB2);
 				a.show();
 				dispose();
 			}
@@ -419,6 +431,10 @@ public class FillInformation extends JFrame
                 	comboBox1 = "Hot Dog";
                     price = 6.00 * textFnB;
                 }
+                else if (((String) comboBoxFnB1.getSelectedItem()).equals(""))
+                {
+                	comboBox1 = "---";
+                }
 
                 //ComboBox2
                 if (((String) comboBoxFnB2.getSelectedItem()).equals("1. Nasi Kerabu"))
@@ -442,6 +458,10 @@ public class FillInformation extends JFrame
                 	comboBox2 = "Hot Dog";
                     price1 = 6.00 * textFnB1;
                 }
+                else if (((String) comboBoxFnB2.getSelectedItem()).equals(""))
+                {
+                	comboBox2 = "---";
+                }
 
                 //ComboBox3
                 if (((String) comboBoxFnB3.getSelectedItem()).equals("1. Nasi Kerabu"))
@@ -464,6 +484,10 @@ public class FillInformation extends JFrame
                 {
                 	comboBox3 = "Hot Dog";
                     price2 = 6.00 * textFnB2;
+                }
+                else if (((String) comboBoxFnB3.getSelectedItem()).equals(""))
+                {
+                	comboBox3 = "---";
                 }
                 
                 double totalAmount = (spinnerAdult1 * priceAdult) + (spinnerAdult1 * pricetype) + (spinnerChildren1 * priceChildren) +(spinnerChildren1 * pricetype) + (price) + (price1) + (price2);
