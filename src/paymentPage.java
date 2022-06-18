@@ -104,54 +104,54 @@ public class paymentPage extends JFrame {
 		JLabel lblSeatNum = new JLabel("SEAT NUMBER: " +seat);
 		lblSeatNum.setForeground(Color.WHITE);
 		lblSeatNum.setFont(new Font("Arial", Font.BOLD, 16));
-		lblSeatNum.setBounds(10, 353, 334, 43);
+		lblSeatNum.setBounds(10, 353, 435, 43);
 		panelConfirmPayment.add(lblSeatNum);
 		
 		JLabel lblAdult = new JLabel("ADULT: " +spinnerAdult1);
 		lblAdult.setForeground(Color.WHITE);
 		lblAdult.setFont(new Font("Arial", Font.BOLD, 16));
-		lblAdult.setBounds(383, 28, 407, 43);
+		lblAdult.setBounds(484, 28, 407, 43);
 		panelConfirmPayment.add(lblAdult);
 		
 		JLabel lblChildren = new JLabel("CHILDREN: " +spinnerChildren1);
 		lblChildren.setForeground(Color.WHITE);
 		lblChildren.setFont(new Font("Arial", Font.BOLD, 16));
-		lblChildren.setBounds(383, 82, 407, 43);
+		lblChildren.setBounds(484, 82, 407, 43);
 		panelConfirmPayment.add(lblChildren);
 		
 		JLabel lblMember = new JLabel("MEMBERSHIP: " +membership1);
 		lblMember.setForeground(Color.WHITE);
 		lblMember.setFont(new Font("Arial", Font.BOLD, 16));
-		lblMember.setBounds(383, 299, 407, 43);
+		lblMember.setBounds(484, 299, 407, 43);
 		panelConfirmPayment.add(lblMember);
 		
 		JSeparator separator = new JSeparator();
 		separator.setOrientation(SwingConstants.VERTICAL);
-		separator.setBounds(354, 11, 19, 404);
+		separator.setBounds(455, 11, 19, 404);
 		panelConfirmPayment.add(separator);
 		
 		JLabel lblFnB1 = new JLabel("FOOD & BEVERAGES 1: " +comboBox1);
 		lblFnB1.setForeground(Color.WHITE);
 		lblFnB1.setFont(new Font("Arial", Font.BOLD, 16));
-		lblFnB1.setBounds(383, 136, 407, 43);
+		lblFnB1.setBounds(484, 136, 407, 43);
 		panelConfirmPayment.add(lblFnB1);
 		
 		JLabel lblFnB2 = new JLabel("FOOD & BEVERAGES 2: " +comboBox2);
 		lblFnB2.setForeground(Color.WHITE);
 		lblFnB2.setFont(new Font("Arial", Font.BOLD, 16));
-		lblFnB2.setBounds(383, 190, 407, 43);
+		lblFnB2.setBounds(484, 190, 407, 43);
 		panelConfirmPayment.add(lblFnB2);
 		
 		JLabel lblFnB3 = new JLabel("FOOD & BEVERAGES 3: " +comboBox3);
 		lblFnB3.setForeground(Color.WHITE);
 		lblFnB3.setFont(new Font("Arial", Font.BOLD, 16));
-		lblFnB3.setBounds(383, 244, 407, 43);
+		lblFnB3.setBounds(484, 244, 407, 43);
 		panelConfirmPayment.add(lblFnB3);
 		
 		JLabel lblTotal = new JLabel("TOTAL: RM " +priceformatter.format(totalTicket));
 		lblTotal.setForeground(Color.WHITE);
 		lblTotal.setFont(new Font("Arial", Font.BOLD, 16));
-		lblTotal.setBounds(383, 353, 407, 43);
+		lblTotal.setBounds(484, 353, 407, 43);
 		panelConfirmPayment.add(lblTotal);
 		
 		JButton btnConfirm = new JButton("CONFIRM");
