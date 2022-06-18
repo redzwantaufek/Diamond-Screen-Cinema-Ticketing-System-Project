@@ -208,34 +208,34 @@ public class RecieptPage extends JFrame {
 		lblMemAns.setBounds(10, 207, 141, 23);
 		panelPrice2.add(lblMemAns);
 		
-		JLabel lblAdultPriceAns = new JLabel("AdultPrice = RM " +priceAdult);
+		JLabel lblAdultPriceAns = new JLabel("RM" +priceAdult);
 		lblAdultPriceAns.setFont(new Font("Arial", Font.BOLD, 15));
-		lblAdultPriceAns.setBounds(161, 1, 148, 23);
+		lblAdultPriceAns.setBounds(181, 1, 148, 23);
 		panelPrice2.add(lblAdultPriceAns);
 		
-		JLabel lblChildPriceAns = new JLabel("ChildPrice = RM "+priceChildren);
+		JLabel lblChildPriceAns = new JLabel("RM"+priceChildren);
 		lblChildPriceAns.setFont(new Font("Arial", Font.BOLD, 15));
-		lblChildPriceAns.setBounds(161, 41, 148, 23);
+		lblChildPriceAns.setBounds(181, 41, 148, 23);
 		panelPrice2.add(lblChildPriceAns);
 		
-		JLabel lblFnB1PriceAns = new JLabel("FnB1Price = RM " +price);
+		JLabel lblFnB1PriceAns = new JLabel("RM" +price);
 		lblFnB1PriceAns.setFont(new Font("Arial", Font.BOLD, 15));
-		lblFnB1PriceAns.setBounds(161, 80, 148, 23);
+		lblFnB1PriceAns.setBounds(181, 80, 148, 23);
 		panelPrice2.add(lblFnB1PriceAns);
 		
-		JLabel lblFnB2PriceAns = new JLabel("FnB2Price = RM "+price1);
+		JLabel lblFnB2PriceAns = new JLabel("RM"+price1);
 		lblFnB2PriceAns.setFont(new Font("Arial", Font.BOLD, 15));
-		lblFnB2PriceAns.setBounds(161, 122, 148, 23);
+		lblFnB2PriceAns.setBounds(181, 122, 148, 23);
 		panelPrice2.add(lblFnB2PriceAns);
 		
-		JLabel lblTFnB3PriceAns = new JLabel("FnB3Price = RM "+price2);
+		JLabel lblTFnB3PriceAns = new JLabel("RM"+price2);
 		lblTFnB3PriceAns.setFont(new Font("Arial", Font.BOLD, 15));
-		lblTFnB3PriceAns.setBounds(161, 160, 148, 23);
+		lblTFnB3PriceAns.setBounds(181, 160, 148, 23);
 		panelPrice2.add(lblTFnB3PriceAns);
 		
-		JLabel lblMembershipPriceAns = new JLabel("Membership = " +membershipDiscount);
+		JLabel lblMembershipPriceAns = new JLabel("RM" +membershipDiscount);
 		lblMembershipPriceAns.setFont(new Font("Arial", Font.BOLD, 15));
-		lblMembershipPriceAns.setBounds(161, 207, 168, 23);
+		lblMembershipPriceAns.setBounds(181, 207, 168, 23);
 		panelPrice2.add(lblMembershipPriceAns);
 		
 		JLabel lblTotalAns = new JLabel("RM" +priceformatter.format(totalTicket));
