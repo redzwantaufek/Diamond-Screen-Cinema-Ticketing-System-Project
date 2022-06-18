@@ -138,7 +138,7 @@ public class paymentPage extends JFrame {
 		
 		JLabel lblTotal = new JLabel("TOTAL: RM " +priceformatter.format(totalTicket));
 		lblTotal.setForeground(Color.WHITE);
-		lblTotal.setFont(new Font("Arial", Font.BOLD, 16));
+		lblTotal.setFont(new Font("Arial", Font.BOLD | Font.ITALIC, 16));
 		lblTotal.setBounds(385, 353, 311, 43);
 		panelConfirmPayment.add(lblTotal);
 		
@@ -169,7 +169,7 @@ public class paymentPage extends JFrame {
 		});
 		comboBoxPayOption.setModel(new DefaultComboBoxModel(new String[] {"", "Online Banking", "E-Wallet", "Credit or Debit Card", "Paypal", "Cryptocurrency"}));
 		comboBoxPayOption.setFont(new Font("Arial", Font.PLAIN, 15));
-		comboBoxPayOption.setBounds(10, 98, 214, 22);
+		comboBoxPayOption.setBounds(10, 89, 214, 22);
 		panelPayOption.add(comboBoxPayOption);
 		
 
@@ -177,7 +177,7 @@ public class paymentPage extends JFrame {
 		lblPay.setHorizontalAlignment(SwingConstants.CENTER);
 		lblPay.setForeground(Color.BLACK);
 		lblPay.setFont(new Font("Arial", Font.BOLD, 11));
-		lblPay.setBounds(10, 57, 214, 30);
+		lblPay.setBounds(10, 48, 214, 30);
 		panelPayOption.add(lblPay);
 		
 		JLabel lblPayOption2 = new JLabel("PAYMENT OPTION:");
@@ -231,6 +231,11 @@ public class paymentPage extends JFrame {
 		});
 		btnPay.setBackground(new Color(255, 255, 255));
 		btnPay.setFont(new Font("Arial", Font.BOLD, 11));
+		
+		JLabel lblEwalletIcon = new JLabel("");
+		lblEwalletIcon.setIcon(new ImageIcon("C:\\Users\\taufe\\Documents\\Coding\\CodingSem2\\Group Project\\Ticketing System Project\\Icon\\Payment Page\\Ewallet Icon.png"));
+		lblEwalletIcon.setBounds(10, 122, 214, 130);
+		panelPayOption.add(lblEwalletIcon);
 		
 		JButton btnBack = new JButton("BACK");
 		btnBack.setBounds(801, 365, 213, 23);
