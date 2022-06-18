@@ -9,6 +9,7 @@ import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import java.awt.Color;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.SwingConstants;
 import javax.swing.ImageIcon;
 import javax.swing.border.TitledBorder;
@@ -224,9 +225,16 @@ public class paymentPage extends JFrame {
                     
                 }
 				
-				RecieptPage a = new RecieptPage(comboBoxPayOption1,name,type,movie,date,time,spinnerAdult1,spinnerChildren1,totalTicket,comboBox1,comboBox2,comboBox3,hallNum,seat,membership1,price,price1,price2,typeAdultPrice,typeChildPrice,membershipDiscount,textFnB,textFnB1,textFnB2);
-				a.show();
-				dispose();
+				if(((String) comboBoxPayOption.getSelectedItem()).equals(""))
+                {
+                	JOptionPane.showMessageDialog(null, "PLEASE SELECT THE PAYMENT OPTION", "ERROR", JOptionPane.ERROR_MESSAGE);
+                }
+                else 
+                {
+    				RecieptPage a = new RecieptPage(comboBoxPayOption1,name,type,movie,date,time,spinnerAdult1,spinnerChildren1,totalTicket,comboBox1,comboBox2,comboBox3,hallNum,seat,membership1,price,price1,price2,typeAdultPrice,typeChildPrice,membershipDiscount,textFnB,textFnB1,textFnB2);
+    				a.show();
+    				dispose();
+                }
 			}
 		});
 		btnPay.setBackground(new Color(255, 255, 255));
