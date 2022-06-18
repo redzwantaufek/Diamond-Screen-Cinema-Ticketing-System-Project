@@ -41,6 +41,7 @@ public class paymentPage extends JFrame {
 	/**
 	 * Create the frame.
 	 */
+	//
 	public paymentPage(String name,String type, String movie, String date, String time, int spinnerAdult1,int spinnerChildren1,double totalTicket, String comboBox1, String comboBox2, String comboBox3,String hallNum,String seat,String membership1,double price,double price1,double price2,int priceAdult, int priceChildren, String membershipDiscount) {
 		setTitle("DIAMOND SCREEN CINEMA (DSC)");
 		setResizable(false);
