@@ -208,27 +208,27 @@ public class RecieptPage extends JFrame {
 		lblMemAns.setBounds(10, 207, 141, 23);
 		panelPrice2.add(lblMemAns);
 		
-		JLabel lblAdultPriceAns = new JLabel("RM" +priceAdult);
+		JLabel lblAdultPriceAns = new JLabel("RM" +priceformatter.format(priceAdult));
 		lblAdultPriceAns.setFont(new Font("Arial", Font.BOLD, 15));
 		lblAdultPriceAns.setBounds(181, 1, 148, 23);
 		panelPrice2.add(lblAdultPriceAns);
 		
-		JLabel lblChildPriceAns = new JLabel("RM"+priceChildren);
+		JLabel lblChildPriceAns = new JLabel("RM"+priceformatter.format(priceChildren));
 		lblChildPriceAns.setFont(new Font("Arial", Font.BOLD, 15));
 		lblChildPriceAns.setBounds(181, 41, 148, 23);
 		panelPrice2.add(lblChildPriceAns);
 		
-		JLabel lblFnB1PriceAns = new JLabel("RM" +price);
+		JLabel lblFnB1PriceAns = new JLabel("RM" +priceformatter.format(price));
 		lblFnB1PriceAns.setFont(new Font("Arial", Font.BOLD, 15));
 		lblFnB1PriceAns.setBounds(181, 80, 148, 23);
 		panelPrice2.add(lblFnB1PriceAns);
 		
-		JLabel lblFnB2PriceAns = new JLabel("RM"+price1);
+		JLabel lblFnB2PriceAns = new JLabel("RM"+priceformatter.format(price1));
 		lblFnB2PriceAns.setFont(new Font("Arial", Font.BOLD, 15));
 		lblFnB2PriceAns.setBounds(181, 122, 148, 23);
 		panelPrice2.add(lblFnB2PriceAns);
 		
-		JLabel lblTFnB3PriceAns = new JLabel("RM"+price2);
+		JLabel lblTFnB3PriceAns = new JLabel("RM"+priceformatter.format(price2));
 		lblTFnB3PriceAns.setFont(new Font("Arial", Font.BOLD, 15));
 		lblTFnB3PriceAns.setBounds(181, 160, 148, 23);
 		panelPrice2.add(lblTFnB3PriceAns);
