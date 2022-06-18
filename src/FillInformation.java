@@ -362,7 +362,7 @@ public class FillInformation extends JFrame
                 //RadioButtonMembership
                 if (rdbtnMembership.isSelected() == true)
                 {
-                	membership1 = "Yes";
+                	membership1 = "Yes (5% Discount)";
                 	membershipDiscount = "" +priceformatter.format(membership);
                 }
                 else if (rdbtnMembership.isSelected() == false)
