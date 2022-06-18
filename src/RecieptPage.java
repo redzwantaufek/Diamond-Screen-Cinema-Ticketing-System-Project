@@ -59,7 +59,7 @@ public class RecieptPage extends JFrame {
 		int textFnbInt2 =(int)textFnB2;
 		
 		JLabel lblBanner = new JLabel("");
-		lblBanner.setIcon(new ImageIcon("C:\\Users\\taufe\\Documents\\Lecture\\Semester 2\\Object Oriented Programming(SWC2333)\\Kerja\\Assignment group\\Gambo\\Black Yellow Simple Business Thank You Postcard (1348 \u00D7 143 mm).png"));
+		lblBanner.setIcon(new ImageIcon("C:\\Users\\taufe\\Documents\\Lecture\\Semester 2\\Object Oriented Programming(SWC2333)\\Kerja\\Assignment group\\Gambo\\Icon\\Receipt Page\\Thank You Banner.png"));
 		lblBanner.setHorizontalAlignment(SwingConstants.CENTER);
 		lblBanner.setBounds(0, 0, 1348, 143);
 		contentPane.add(lblBanner);
@@ -72,7 +72,7 @@ public class RecieptPage extends JFrame {
 		panel.setLayout(null);
 		
 		JLabel lblQR = new JLabel("");
-		lblQR.setIcon(new ImageIcon("C:\\Users\\taufe\\Documents\\Lecture\\Semester 2\\Object Oriented Programming(SWC2333)\\Kerja\\Assignment group\\Gambo\\SCANE ME.png"));
+		lblQR.setIcon(new ImageIcon("C:\\Users\\taufe\\Documents\\Lecture\\Semester 2\\Object Oriented Programming(SWC2333)\\Kerja\\Assignment group\\Gambo\\Icon\\Receipt Page\\QR Icon.png"));
 		lblQR.setBounds(1018, 11, 300, 383);
 		panel.add(lblQR);
 		
@@ -118,7 +118,7 @@ public class RecieptPage extends JFrame {
 		panel_1.add(lblSeatNum);
 		
 		JLabel lblReceiptIcon = new JLabel("");
-		lblReceiptIcon.setIcon(new ImageIcon("C:\\Users\\taufe\\Documents\\Lecture\\Semester 2\\Object Oriented Programming(SWC2333)\\Kerja\\Assignment group\\Gambo\\RECEIPT.png"));
+		lblReceiptIcon.setIcon(new ImageIcon("C:\\Users\\taufe\\Documents\\Lecture\\Semester 2\\Object Oriented Programming(SWC2333)\\Kerja\\Assignment group\\Gambo\\Icon\\Receipt Page\\Receipt Icon.png"));
 		lblReceiptIcon.setHorizontalAlignment(SwingConstants.CENTER);
 		lblReceiptIcon.setBounds(352, 0, 281, 33);
 		panel_1.add(lblReceiptIcon);
@@ -252,7 +252,7 @@ public class RecieptPage extends JFrame {
 		JTextArea textAreaTotal = new JTextArea("RM" +priceformatter.format(totalTicket));
 		textAreaTotal.setEditable(false);
 		textAreaTotal.setFont(new Font("Arial", Font.BOLD, 15));
-		textAreaTotal.setBounds(181, 293, 141, 23);
+		textAreaTotal.setBounds(180, 295, 141, 20);
 		panelPrice2.add(textAreaTotal);
 		
 		JLabel lblTimePurchase = new JLabel("TIME PURCHASE:");

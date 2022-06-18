@@ -76,12 +76,12 @@ public class FillInformation extends JFrame
         this.setLocation(dim.width/2-this.getSize().width/2, dim.height/2-this.getSize().height/2);
 		
 		JLabel lblCinmaIcon = new JLabel("");
-		lblCinmaIcon.setIcon(new ImageIcon("C:\\Users\\taufe\\Documents\\Lecture\\Semester 2\\Object Oriented Programming(SWC2333)\\Kerja\\Assignment group\\Gambo\\DSC Cinema Logo Long (542 \u00D7 140 px).png"));
+		lblCinmaIcon.setIcon(new ImageIcon("C:\\Users\\taufe\\Documents\\Lecture\\Semester 2\\Object Oriented Programming(SWC2333)\\Kerja\\Assignment group\\Gambo\\Icon\\Fill Information\\DSC Cinema Banner.png"));
 		lblCinmaIcon.setBounds(0, 0, 542, 140);
 		contentPane.add(lblCinmaIcon);
 		
 		JLabel lblSeatIcon = new JLabel("");
-		lblSeatIcon.setIcon(new ImageIcon("C:\\Users\\taufe\\Documents\\Lecture\\Semester 2\\Object Oriented Programming(SWC2333)\\Kerja\\Assignment group\\Gambo\\Access-seating-plan-Sep-2021-1000x752.png"));
+		lblSeatIcon.setIcon(new ImageIcon("C:\\Users\\taufe\\Documents\\Lecture\\Semester 2\\Object Oriented Programming(SWC2333)\\Kerja\\Assignment group\\Gambo\\Icon\\Fill Information\\Seat Icon.png"));
 		lblSeatIcon.setBounds(22, 151, 500, 389);
 		contentPane.add(lblSeatIcon);
 		
@@ -382,7 +382,7 @@ public class FillInformation extends JFrame
 		contentPane.add(btnProceed);
 		
 		JLabel lblPriceIcon = new JLabel("");
-		lblPriceIcon.setIcon(new ImageIcon("C:\\Users\\taufe\\Documents\\Lecture\\Semester 2\\Object Oriented Programming(SWC2333)\\Kerja\\Assignment group\\Gambo\\Price List cinema.png"));
+		lblPriceIcon.setIcon(new ImageIcon("C:\\Users\\taufe\\Documents\\Lecture\\Semester 2\\Object Oriented Programming(SWC2333)\\Kerja\\Assignment group\\Gambo\\Icon\\Fill Information\\Price List Poster.png"));
 		lblPriceIcon.setBounds(560, 11, 367, 546);
 		contentPane.add(lblPriceIcon);
 		

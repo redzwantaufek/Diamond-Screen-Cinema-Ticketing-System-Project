@@ -96,7 +96,7 @@ public class loginFrame extends JFrame {
 		contentPane.add(btnLogin);
 		
 		JLabel lblLoginIcon = new JLabel("");
-		lblLoginIcon.setIcon(new ImageIcon("C:\\Users\\taufe\\Documents\\Lecture\\Semester 2\\Object Oriented Programming(SWC2333)\\Kerja\\Assignment group\\Gambo\\Black Simple Minimal Comming Soon Cinema Youtube Thumbnail (1368 \u00D7 362 px).png"));
+		lblLoginIcon.setIcon(new ImageIcon("C:\\Users\\taufe\\Documents\\Lecture\\Semester 2\\Object Oriented Programming(SWC2333)\\Kerja\\Assignment group\\Gambo\\Icon\\Login Frame\\Login Page Background.png"));
 		lblLoginIcon.setBounds(0, 0, 1348, 570);
 		contentPane.add(lblLoginIcon);
 	}

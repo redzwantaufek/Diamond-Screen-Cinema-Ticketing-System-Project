@@ -68,7 +68,7 @@ public class WelcomePage extends JFrame {
         this.setLocation(dim.width/2-this.getSize().width/2, dim.height/2-this.getSize().height/2);
 		
 		JLabel lblLogoIconWelcome = new JLabel("");
-		lblLogoIconWelcome.setIcon(new ImageIcon("C:\\Users\\taufe\\Documents\\Lecture\\Semester 2\\Object Oriented Programming(SWC2333)\\Kerja\\Assignment group\\Gambo\\DSC Cinema Logo Long (950 \u00D7 107 px) dolby imax.png"));
+		lblLogoIconWelcome.setIcon(new ImageIcon("C:\\Users\\taufe\\Documents\\Lecture\\Semester 2\\Object Oriented Programming(SWC2333)\\Kerja\\Assignment group\\Gambo\\Icon\\Welcome Page\\DSC Cinema Banner.png"));
 		lblLogoIconWelcome.setBounds(388, 11, 950, 107);
 		contentPane.add(lblLogoIconWelcome);
 		
@@ -80,22 +80,22 @@ public class WelcomePage extends JFrame {
 		panelNowShowing.setLayout(null);
 		
 		JLabel lblTopGunIcon = new JLabel("");
-		lblTopGunIcon.setIcon(new ImageIcon("C:\\Users\\taufe\\Documents\\Lecture\\Semester 2\\Object Oriented Programming(SWC2333)\\Kerja\\Assignment group\\Gambo\\TOPGUN POSTER kecik.jpg"));
+		lblTopGunIcon.setIcon(new ImageIcon("C:\\Users\\taufe\\Documents\\Lecture\\Semester 2\\Object Oriented Programming(SWC2333)\\Kerja\\Assignment group\\Gambo\\Icon\\Welcome Page\\Top Gun Maverick.jpg"));
 		lblTopGunIcon.setBounds(10, 21, 159, 222);
 		panelNowShowing.add(lblTopGunIcon);
 		
 		JLabel lblDrStrangeIcon = new JLabel("");
-		lblDrStrangeIcon.setIcon(new ImageIcon("C:\\Users\\taufe\\Documents\\Lecture\\Semester 2\\Object Oriented Programming(SWC2333)\\Kerja\\Assignment group\\Gambo\\FQWWNqgVEAUX1Uz kecik.jpg"));
+		lblDrStrangeIcon.setIcon(new ImageIcon("C:\\Users\\taufe\\Documents\\Lecture\\Semester 2\\Object Oriented Programming(SWC2333)\\Kerja\\Assignment group\\Gambo\\Icon\\Welcome Page\\Dr Strange 2.jpg"));
 		lblDrStrangeIcon.setBounds(199, 21, 152, 222);
 		panelNowShowing.add(lblDrStrangeIcon);
 		
 		JLabel lblJurassicIcon = new JLabel("");
-		lblJurassicIcon.setIcon(new ImageIcon("C:\\Users\\taufe\\Documents\\Lecture\\Semester 2\\Object Oriented Programming(SWC2333)\\Kerja\\Assignment group\\Gambo\\nima-neemz-nakhshab-dominion-final kecik.jpg"));
+		lblJurassicIcon.setIcon(new ImageIcon("C:\\Users\\taufe\\Documents\\Lecture\\Semester 2\\Object Oriented Programming(SWC2333)\\Kerja\\Assignment group\\Gambo\\Icon\\Welcome Page\\Jurassic Dominion.jpg"));
 		lblJurassicIcon.setBounds(199, 288, 152, 222);
 		panelNowShowing.add(lblJurassicIcon);
 		
 		JLabel lblSonicIcon = new JLabel("");
-		lblSonicIcon.setIcon(new ImageIcon("C:\\Users\\taufe\\Documents\\Lecture\\Semester 2\\Object Oriented Programming(SWC2333)\\Kerja\\Assignment group\\Gambo\\MV5BMGI1NjA1MjUtNGQxNC00NDYyLThjODgtZjFkZjQ4OGM0NDc5XkEyXkFqcGdeQXVyMTM0NTUzNDIy._V1_FMjpg_UX1000_Sonic.jpg"));
+		lblSonicIcon.setIcon(new ImageIcon("C:\\Users\\taufe\\Documents\\Lecture\\Semester 2\\Object Oriented Programming(SWC2333)\\Kerja\\Assignment group\\Gambo\\Icon\\Welcome Page\\Sonic 2.jpg"));
 		lblSonicIcon.setBounds(10, 288, 152, 222);
 		panelNowShowing.add(lblSonicIcon);
 		
@@ -188,7 +188,7 @@ public class WelcomePage extends JFrame {
 		panelsShowtime.add(comboBoxTime);
 		
 		JLabel lblShowtimeTable = new JLabel("");
-		lblShowtimeTable.setIcon(new ImageIcon("C:\\Users\\taufe\\Documents\\Lecture\\Semester 2\\Object Oriented Programming(SWC2333)\\Kerja\\Assignment group\\Gambo\\Comparison Table List Infographic Gantt Chart Graph (234 \u00D7 408 px).png"));
+		lblShowtimeTable.setIcon(new ImageIcon("C:\\Users\\taufe\\Documents\\Lecture\\Semester 2\\Object Oriented Programming(SWC2333)\\Kerja\\Assignment group\\Gambo\\Icon\\Welcome Page\\Showing Time Poster.png"));
 		lblShowtimeTable.setBounds(412, 15, 234, 404);
 		panelsShowtime.add(lblShowtimeTable);
 		
@@ -386,7 +386,7 @@ public class WelcomePage extends JFrame {
             clock.start();
 		
 		JLabel lblNewLabel = new JLabel("");
-		lblNewLabel.setIcon(new ImageIcon("C:\\Users\\taufe\\Documents\\Lecture\\Semester 2\\Object Oriented Programming(SWC2333)\\Kerja\\Assignment group\\Gambo\\iloveimg-resized\\Webp.net-gifmaker.gif"));
+		lblNewLabel.setIcon(new ImageIcon("C:\\Users\\taufe\\Documents\\Lecture\\Semester 2\\Object Oriented Programming(SWC2333)\\Kerja\\Assignment group\\Gambo\\Icon\\Welcome Page\\Coming Soon Gif.gif"));
 		lblNewLabel.setBounds(10, 25, 264, 394);
 		panelComingSoon.add(lblNewLabel);
 	}

@@ -3,7 +3,7 @@ import java.awt.*;
 
 public class loadingScreen {
     JFrame frame;
-    JLabel image=new JLabel(new ImageIcon("C:\\Users\\taufe\\Documents\\Lecture\\Semester 2\\Object Oriented Programming(SWC2333)\\Kerja\\Assignment group\\Gambo\\dsc poster (1344 \u00D7 587 px) (1364 \u00D7 408 px).png"));
+    JLabel image=new JLabel(new ImageIcon("C:\\Users\\taufe\\Documents\\Lecture\\Semester 2\\Object Oriented Programming(SWC2333)\\Kerja\\Assignment group\\Gambo\\Icon\\Loading Screen\\DSC Poster.png"));
     JLabel text=new JLabel("WELCOME");
     JProgressBar progressBar=new JProgressBar();
     JLabel message=new JLabel();//Crating a JLabel for displaying the message

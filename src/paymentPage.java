@@ -54,7 +54,7 @@ public class paymentPage extends JFrame {
 		contentPane.setLayout(null);
 		
 		JLabel lblNewLabelBanner = new JLabel("");
-		lblNewLabelBanner.setIcon(new ImageIcon("C:\\Users\\taufe\\Documents\\Lecture\\Semester 2\\Object Oriented Programming(SWC2333)\\Kerja\\Assignment group\\Gambo\\DSC Cinema Logo Long (1328 \u00D7 143 px).png"));
+		lblNewLabelBanner.setIcon(new ImageIcon("C:\\Users\\taufe\\Documents\\Lecture\\Semester 2\\Object Oriented Programming(SWC2333)\\Kerja\\Assignment group\\Gambo\\Icon\\Payment Page\\DSC Cinema Banner.png"));
 		lblNewLabelBanner.setHorizontalAlignment(SwingConstants.CENTER);
 		lblNewLabelBanner.setBounds(0, 0, 1348, 143);
 		contentPane.add(lblNewLabelBanner);
@@ -192,7 +192,7 @@ public class paymentPage extends JFrame {
 		JLabel lblNewLabelNowShowing = new JLabel("");
 		lblNewLabelNowShowing.setBounds(10, 14, 264, 394);
 		panel.add(lblNewLabelNowShowing);
-		lblNewLabelNowShowing.setIcon(new ImageIcon("C:\\Users\\taufe\\Documents\\Lecture\\Semester 2\\Object Oriented Programming(SWC2333)\\Kerja\\Assignment group\\Gambo\\iloveimg-resized\\now showing gif.gif"));
+		lblNewLabelNowShowing.setIcon(new ImageIcon("C:\\Users\\taufe\\Documents\\Lecture\\Semester 2\\Object Oriented Programming(SWC2333)\\Kerja\\Assignment group\\Gambo\\Icon\\Payment Page\\Now Showing Gif.gif"));
 		
 		Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
         this.setLocation(dim.width/2-this.getSize().width/2, dim.height/2-this.getSize().height/2);
