@@ -46,7 +46,8 @@ public class FillInformation extends JFrame
 	/**
 	 * Create the frame.
 	 */
-	public FillInformation(String name, String type, String movie, String date, String time,double pricetype) {
+	public FillInformation(String name, String type, String movie, String date, String time,double pricetype) 
+	{
 		setTitle("DIAMOND SCREEN CINEMA(DSC)");
 		setResizable(false);
 		setIconImage(Toolkit.getDefaultToolkit().getImage("C:\\Users\\taufe\\Documents\\Lecture\\Semester 2\\Object Oriented Programming(SWC2333)\\Kerja\\Assignment group\\Gambo\\Gold Line art Video Camera for Movie Cinema Production Logo (200 \u00D7 200 px).png"));
@@ -58,28 +59,35 @@ public class FillInformation extends JFrame
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
+		
+		//to make frame pop out center
 		Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
         this.setLocation(dim.width/2-this.getSize().width/2, dim.height/2-this.getSize().height/2);
 		
+        
 		JLabel lblCinmaIcon = new JLabel("");
 		lblCinmaIcon.setIcon(new ImageIcon("C:\\Users\\taufe\\Documents\\Lecture\\Semester 2\\Object Oriented Programming(SWC2333)\\Kerja\\Assignment group\\Gambo\\Icon\\Fill Information\\DSC Cinema Banner.png"));
 		lblCinmaIcon.setBounds(0, 0, 542, 140);
 		contentPane.add(lblCinmaIcon);
+		
 		
 		JLabel lblSeatIcon = new JLabel("");
 		lblSeatIcon.setIcon(new ImageIcon("C:\\Users\\taufe\\Documents\\Lecture\\Semester 2\\Object Oriented Programming(SWC2333)\\Kerja\\Assignment group\\Gambo\\Icon\\Fill Information\\Seat Icon.png"));
 		lblSeatIcon.setBounds(22, 151, 500, 389);
 		contentPane.add(lblSeatIcon);
 		
+		
 		JSeparator separator = new JSeparator();
 		separator.setOrientation(SwingConstants.VERTICAL);
 		separator.setBounds(542, 0, 8, 574);
 		contentPane.add(separator);
 		
+		
 		JSeparator separator_1 = new JSeparator();
 		separator_1.setOrientation(SwingConstants.VERTICAL);
 		separator_1.setBounds(940, 0, 8, 574);
 		contentPane.add(separator_1);
+		
 		
 		JLabel lblTitle = new JLabel("PLEASE FILL THE INFORMATION");
 		lblTitle.setForeground(new Color(255, 255, 255));
@@ -89,6 +97,7 @@ public class FillInformation extends JFrame
 		lblTitle.setBounds(978, 32, 325, 14);
 		contentPane.add(lblTitle);
 		
+		
 		JComboBox comboBoxHallNum = new JComboBox();
 		comboBoxHallNum.setModel(new DefaultComboBoxModel(new String[] {"", "Hall 1", "Hall 2", "Hall 3", "Hall 4", "Hall 5", "Hall 6", "Hall 7"}));
 		comboBoxHallNum.setFont(new Font("Arial", Font.PLAIN, 11));
@@ -96,11 +105,13 @@ public class FillInformation extends JFrame
 		comboBoxHallNum.setBounds(1177, 72, 142, 19);
 		contentPane.add(comboBoxHallNum);
 
+		
 		JLabel lblSeatNumber = new JLabel("SEAT NUMBER");
 		lblSeatNumber.setForeground(new Color(255, 255, 255));
 		lblSeatNumber.setFont(new Font("Arial", Font.BOLD, 13));
 		lblSeatNumber.setBounds(965, 110, 160, 14);
 		contentPane.add(lblSeatNumber);
+		
 		
 		JLabel lblAdult = new JLabel("ADULT");
 		lblAdult.setForeground(new Color(255, 255, 255));
@@ -108,11 +119,13 @@ public class FillInformation extends JFrame
 		lblAdult.setBounds(965, 147, 160, 14);
 		contentPane.add(lblAdult);
 		
+		
 		JLabel lblChildren = new JLabel("CHILDREN");
 		lblChildren.setForeground(new Color(255, 255, 255));
 		lblChildren.setFont(new Font("Arial", Font.BOLD, 13));
 		lblChildren.setBounds(965, 182, 160, 14);
 		contentPane.add(lblChildren);
+		
 		
 		JLabel lblMembership = new JLabel("MEMBERSHIP");
 		lblMembership.setFont(new Font("Arial", Font.BOLD, 13));
@@ -120,11 +133,13 @@ public class FillInformation extends JFrame
 		lblMembership.setBounds(965, 218, 160, 14);
 		contentPane.add(lblMembership);
 		
+		
 		JLabel lblFnB = new JLabel("FOOD AND BEVERAGES");
 		lblFnB.setFont(new Font("Arial", Font.BOLD, 13));
 		lblFnB.setForeground(new Color(255, 255, 255));
 		lblFnB.setBounds(965, 294, 160, 14);
 		contentPane.add(lblFnB);
+		
 		
 		textSeat = new JTextField();
 		textSeat.setBackground(new Color(255, 255, 255));
@@ -133,12 +148,14 @@ public class FillInformation extends JFrame
 		contentPane.add(textSeat);
 		textSeat.setColumns(10);
 		
+		
 		JSpinner spinnerAdult = new JSpinner();
 		spinnerAdult.setModel(new SpinnerNumberModel(new Integer(0), new Integer(0), null, new Integer(1)));
 		spinnerAdult.setBackground(new Color(255, 255, 255));
 		spinnerAdult.setFont(new Font("Arial", Font.PLAIN, 11));
 		spinnerAdult.setBounds(1177, 141, 142, 20);
 		contentPane.add(spinnerAdult);
+		
 		
 		JSpinner spinnerChildren = new JSpinner();
 		spinnerChildren.setModel(new SpinnerNumberModel(new Integer(0), new Integer(0), null, new Integer(1)));
@@ -147,9 +164,14 @@ public class FillInformation extends JFrame
 		spinnerChildren.setBounds(1177, 176, 142, 20);
 		contentPane.add(spinnerChildren);
 		
+		
 		JRadioButton rdbtnMembership = new JRadioButton("Membership");
-		rdbtnMembership.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
+		rdbtnMembership.addActionListener(new ActionListener() 
+		{
+			public void actionPerformed(ActionEvent e) 
+			{
+				
+				// to get the actual value for membership discount
 				if (e.getSource() == rdbtnMembership)
 				{
 					membershipValue = 0.05;
@@ -166,12 +188,14 @@ public class FillInformation extends JFrame
 		rdbtnMembership.setBounds(1177, 213, 142, 19);
 		contentPane.add(rdbtnMembership);
 		
+		
 		JRadioButton rdbtnNonMembership = new JRadioButton("Non-Membership");
 		buttonGroup.add(rdbtnNonMembership);
 		rdbtnNonMembership.setBackground(new Color(255, 255, 255));
 		rdbtnNonMembership.setFont(new Font("Arial", Font.PLAIN, 11));
 		rdbtnNonMembership.setBounds(1177, 250, 142, 19);
 		contentPane.add(rdbtnNonMembership);
+		
 		
 		JComboBox comboBoxFnB1 = new JComboBox();
 		comboBoxFnB1.setBackground(new Color(255, 255, 255));
@@ -180,12 +204,14 @@ public class FillInformation extends JFrame
 		comboBoxFnB1.setBounds(1177, 289, 142, 19);
 		contentPane.add(comboBoxFnB1);
 		
+		
 		JComboBox comboBoxFnB2 = new JComboBox();
 		comboBoxFnB2.setBackground(new Color(255, 255, 255));
 		comboBoxFnB2.setFont(new Font("Arial", Font.PLAIN, 11));
 		comboBoxFnB2.setModel(new DefaultComboBoxModel(new String[] {"", "1. Nasi Kerabu", "2. Popcorn", "3. Soda Drink", "4. Hot Dog"}));
 		comboBoxFnB2.setBounds(1177, 350, 142, 19);
 		contentPane.add(comboBoxFnB2);
+		
 		
 		JComboBox comboBoxFnB3 = new JComboBox();
 		comboBoxFnB3.setBackground(new Color(255, 255, 255));
@@ -194,13 +220,16 @@ public class FillInformation extends JFrame
 		comboBoxFnB3.setBounds(1177, 412, 142, 19);
 		contentPane.add(comboBoxFnB3);
 		
+		
 		JSeparator separator_2 = new JSeparator();
 		separator_2.setBounds(965, 508, 160, 10);
 		contentPane.add(separator_2);
 		
+		
 		JSeparator separator_2_1 = new JSeparator();
 		separator_2_1.setBounds(965, 547, 160, 10);
 		contentPane.add(separator_2_1);
+		
 		
 		textTotal = new JTextField();
 		textTotal.setBackground(new Color(255, 255, 255));
@@ -209,9 +238,14 @@ public class FillInformation extends JFrame
 		textTotal.setText(null);
 		textTotal.setColumns(10);
 		
+		
 		JButton btnProceed = new JButton("PROCEED");
-		btnProceed.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
+		btnProceed.addActionListener(new ActionListener() 
+		{
+			public void actionPerformed(ActionEvent e) 
+			{
+				
+				//declare
 				int spinnerAdult1 = (int) spinnerAdult.getValue();
                 int  spinnerChildren1 = (int) spinnerChildren.getValue();
                 double price = 0.0;
@@ -230,7 +264,8 @@ public class FillInformation extends JFrame
                 String membership1 = (rdbtnMembership).toString();
                 String membershipDiscount = (rdbtnMembership).toString();
                 
-                //ComboBoxHallNum
+                
+                //if lese ComboBoxHallNum to get the hall number
                 if (((String)comboBoxHallNum.getSelectedItem()).equals("Hall 1"))
                 {
                 	hallNum = "Hall 1";
@@ -260,7 +295,8 @@ public class FillInformation extends JFrame
                 	hallNum = "Hall 6";
                 }
                 
-                //Combobox1
+                
+                //if else Combobox1 to get the food and beverages type
                 if (((String) comboBoxFnB1.getSelectedItem()).equals("1. Nasi Kerabu"))
                 {
                 	comboBox1 = "Nasi Kerabu";
@@ -287,7 +323,8 @@ public class FillInformation extends JFrame
                 	comboBox1 = "---";
                 }
 
-                //ComboBox2
+                
+                //if else Combobox2 to get the food and beverages type
                 if (((String) comboBoxFnB2.getSelectedItem()).equals("1. Nasi Kerabu"))
                 {
                 	comboBox2 = "Nasi Kerabu";
@@ -314,7 +351,8 @@ public class FillInformation extends JFrame
                 	comboBox2 = "---";
                 }
 
-                //ComboBox3
+                
+                //if else Combobox3 to get the food and beverages type
                 if (((String) comboBoxFnB3.getSelectedItem()).equals("1. Nasi Kerabu"))
                 {
                 	comboBox3 = "Nasi Kerabu";
@@ -341,13 +379,16 @@ public class FillInformation extends JFrame
                 	comboBox3 = "---";
                 }
                 
+                
+                //calculate the total price
                 double typeAdultPrice = (spinnerAdult1 * priceAdult) + (spinnerAdult1 * pricetype);
                 double typeChildPrice = (spinnerChildren1 * priceChildren) +(spinnerChildren1 * pricetype);
                 double totalAmount = typeAdultPrice + typeChildPrice + (price) + (price1) + (price2);
                 double membership = (totalAmount) * (membershipValue);
                 double totalTicket = (totalAmount) - (membership);
                 
-                //RadioButtonMembership
+                
+                //if else RadioButtonMembership to get the membership discount true or false and the discount price
                 if (rdbtnMembership.isSelected() == true)
                 {
                 	membership1 = "Yes (5% Discount)";
@@ -359,12 +400,15 @@ public class FillInformation extends JFrame
                 	membershipDiscount = "" +priceformatter.format(membership);
                 }
                 
+                
+                //if else to show the error messages if there any error
                 if(seat.equalsIgnoreCase("") || ((String)comboBoxHallNum.getSelectedItem()).equals("") || (!rdbtnMembership.isSelected())) 
                 {
                 	JOptionPane.showMessageDialog(null, "PLEASE SELECT THE OPTION", "ERROR", JOptionPane.ERROR_MESSAGE);
                 }
                 else 
                 {
+                	//to connect to paymentPage frame and bring the variables
                 	paymentPage a = new paymentPage(name,type,movie,date,time,spinnerAdult1,spinnerChildren1,totalTicket,comboBox1,comboBox2,comboBox3,hallNum,seat,membership1,price,price1,price2,typeAdultPrice,typeChildPrice,membershipDiscount,textFnB,textFnB1,textFnB2,pricetype);
     				a.show();
     				dispose();
@@ -391,6 +435,8 @@ public class FillInformation extends JFrame
 		JButton btnTotal = new JButton("TOTAL:");
         btnTotal.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
+            	
+            	//declare
             	DecimalFormat priceformatter = new DecimalFormat ("#0.00");
                 int spinnerAdult1 = (int) spinnerAdult.getValue();
                 int spinnerChildren1 = (int) spinnerChildren.getValue();
@@ -406,7 +452,7 @@ public class FillInformation extends JFrame
                 String comboBox2 = (String)comboBoxFnB2.getSelectedItem();
                 String comboBox3 = (String)comboBoxFnB3.getSelectedItem();
                 
-                //Combobox1
+                //if else Combobox1 to get the food and beverages type
                 if (((String) comboBoxFnB1.getSelectedItem()).equals("1. Nasi Kerabu"))
                 {
                 	comboBox1 = "Nasi Kerabu";
@@ -433,7 +479,7 @@ public class FillInformation extends JFrame
                 	comboBox1 = "---";
                 }
 
-                //ComboBox2
+                //if else Combobox2 to get the food and beverages type
                 if (((String) comboBoxFnB2.getSelectedItem()).equals("1. Nasi Kerabu"))
                 {
                 	comboBox2 = "Nasi Kerabu";
@@ -460,7 +506,7 @@ public class FillInformation extends JFrame
                 	comboBox2 = "---";
                 }
 
-                //ComboBox3
+                //if else Combobox3 to get the food and beverages type
                 if (((String) comboBoxFnB3.getSelectedItem()).equals("1. Nasi Kerabu"))
                 {
                 	comboBox3 = "Nasi Kerabu";
@@ -486,6 +532,8 @@ public class FillInformation extends JFrame
                 {
                 	comboBox3 = "---";
                 }
+                
+                //to calculate the total price
                 double typeAdultPrice = (spinnerAdult1 * priceAdult) + (spinnerAdult1 * pricetype);
                 double typeChildPrice = (spinnerChildren1 * priceChildren) +(spinnerChildren1 * pricetype);
                 double totalAmount = typeAdultPrice + typeChildPrice + (price) + (price1) + (price2);
@@ -528,6 +576,7 @@ public class FillInformation extends JFrame
 			public void actionPerformed(ActionEvent e) {
 				if (e.getSource() == btnReset)
 				{
+					//to reset all the option
 					spinnerAdult.setValue(0);
 					spinnerChildren.setValue(0);
 					rdbtnMembership.setSelected(false);
@@ -553,6 +602,7 @@ public class FillInformation extends JFrame
 		JButton btnBack = new JButton("BACK");
 		btnBack.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				//to back and connect with welcome page
 				WelcomePage a = new WelcomePage(name);
 				a.show();
 				dispose();

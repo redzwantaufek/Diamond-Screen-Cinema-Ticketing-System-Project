@@ -1,6 +1,9 @@
-public class runClass {
-    public static void main(String[] args){
-        new loadingScreen();//Creating object of SplashScreenDemo class
+public class runClass 
+{
+    public static void main(String[] args)
+    {
+    	//Creating object of loadingScreen class
+        new loadingScreen();
         loginFrame a = new loginFrame();
         a.show();
         //

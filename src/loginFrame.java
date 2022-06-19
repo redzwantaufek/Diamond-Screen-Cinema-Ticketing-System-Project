@@ -28,13 +28,19 @@ public class loginFrame extends JFrame {
 	/**
 	 * Launch the application.
 	 */
-	public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
+	public static void main(String[] args) 
+	{
+		EventQueue.invokeLater(new Runnable() 
+		{
+			public void run() 
+			{
+				try 
+				{
 					loginFrame frame = new loginFrame();
 					frame.setVisible(true);
-				} catch (Exception e) {
+				} 
+				catch (Exception e) 
+				{
 					e.printStackTrace();
 				}
 			}
@@ -45,7 +51,8 @@ public class loginFrame extends JFrame {
 	 * Create the frame.
 	 */
 	//
-	public loginFrame() {
+	public loginFrame() 
+	{
 		setResizable(false);
 		setIconImage(Toolkit.getDefaultToolkit().getImage("C:\\Users\\taufe\\Documents\\Lecture\\Semester 2\\Object Oriented Programming(SWC2333)\\Kerja\\Assignment group\\Gambo\\Gold Line art Video Camera for Movie Cinema Production Logo (200 \u00D7 200 px).png"));
 		setTitle("DIAMOND SCREEN CINEMA (DSC)");
@@ -57,6 +64,7 @@ public class loginFrame extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
+		//to make frame pop out center
 		Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
         this.setLocation(dim.width/2-this.getSize().width/2, dim.height/2-this.getSize().height/2);
 		
@@ -84,20 +92,25 @@ public class loginFrame extends JFrame {
 		JButton btnLogin = new JButton("Login");
 		btnLogin.setBackground(new Color(255, 255, 255));
 		btnLogin.setForeground(new Color(0, 0, 0));
-		btnLogin.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
+		btnLogin.addActionListener(new ActionListener() 
+		{
+			public void actionPerformed(ActionEvent e) 
+			{
+				//declare
 				String name = textName.getText();
                 String password = passwordField.getText();                
                 
+                // if else to show the error message if there any error
                 if (name.equalsIgnoreCase("") || (password.equalsIgnoreCase(""))) 
                 {
                 	JOptionPane.showMessageDialog(null, "PLEASE FILL THE USERNAME AND PASSWORD ", "ERROR", JOptionPane.ERROR_MESSAGE);
                 }
                 else
                 {
-				WelcomePage a = new WelcomePage(name);
-				a.show();
-				dispose();
+	                //to connect with Welcome Page JFrame
+					WelcomePage a = new WelcomePage(name);
+					a.show();
+					dispose();
                 }
 				
 				
