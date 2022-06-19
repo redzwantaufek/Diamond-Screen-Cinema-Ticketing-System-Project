@@ -41,6 +41,10 @@ public class paymentPage extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
+		int textFnbInt =(int)textFnB;
+		int textFnbInt1 =(int)textFnB1;
+		int textFnbInt2 =(int)textFnB2;
+		
 		JLabel lblNewLabelBanner = new JLabel("");
 		lblNewLabelBanner.setIcon(new ImageIcon("C:\\Users\\taufe\\Documents\\Lecture\\Semester 2\\Object Oriented Programming(SWC2333)\\Kerja\\Assignment group\\Gambo\\Icon\\Payment Page\\DSC Cinema Banner.png"));
 		lblNewLabelBanner.setHorizontalAlignment(SwingConstants.CENTER);
@@ -119,19 +123,19 @@ public class paymentPage extends JFrame {
 		separator.setBounds(367, 8, 19, 404);
 		panelConfirmPayment.add(separator);
 		
-		JLabel lblFnB1 = new JLabel("FOOD & BEVERAGES 1: " +comboBox1);
+		JLabel lblFnB1 = new JLabel("FOOD & BEVERAGES 1: " +comboBox1 +" x " +textFnbInt);
 		lblFnB1.setForeground(Color.WHITE);
 		lblFnB1.setFont(new Font("Arial", Font.BOLD, 16));
 		lblFnB1.setBounds(385, 136, 407, 43);
 		panelConfirmPayment.add(lblFnB1);
 		
-		JLabel lblFnB2 = new JLabel("FOOD & BEVERAGES 2: " +comboBox2);
+		JLabel lblFnB2 = new JLabel("FOOD & BEVERAGES 2: " +comboBox2 +" x " +textFnbInt1);
 		lblFnB2.setForeground(Color.WHITE);
 		lblFnB2.setFont(new Font("Arial", Font.BOLD, 16));
 		lblFnB2.setBounds(385, 190, 407, 43);
 		panelConfirmPayment.add(lblFnB2);
 		
-		JLabel lblFnB3 = new JLabel("FOOD & BEVERAGES 3: " +comboBox3);
+		JLabel lblFnB3 = new JLabel("FOOD & BEVERAGES 3: " +comboBox3 +" x " +textFnbInt2);
 		lblFnB3.setForeground(Color.WHITE);
 		lblFnB3.setFont(new Font("Arial", Font.BOLD, 16));
 		lblFnB3.setBounds(385, 244, 407, 43);
